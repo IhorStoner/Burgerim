@@ -1,0 +1,38 @@
+.orderBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0
+  ;
+  &__btn {
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-size: cover;
+    background-color: transparent;
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 44px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--yellow {
+      background-image: url('../../assets/png/yellowBtn.png');
+      width: 236px;
+      height: 155px;
+    }
+
+    &--brown {
+      background-image: url('../../assets/png/brownBtn.png');
+      width: 645px;
+      height: 155px;
+    }
+    &--green {
+      background-image: url('../../assets/png/greenBtn.png');
+      width: 237px;
+      height: 155px;
+      display: block;
+    }
+  }
+}
