@@ -14,9 +14,13 @@ function App() {
     <Provider store={store} className="App">
       <Header />
       <Slider />
+
       <OrderButtons/>
+
       <OrderPopup />
+
       <MenuList />
+      
     </Provider>
   );
 }
