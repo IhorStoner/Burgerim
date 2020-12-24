@@ -17,14 +17,14 @@
     margin-right: 20px;
     margin-left: 0;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
       margin-left: 20px;
     }
   }
 
   &__logo {
-    background-image: url('../../assets/svg/blogo1.svg');
+    background-image: url("../../assets/svg/blogo1.svg");
     width: 280px;
     height: 100%;
     background-size: contain;
@@ -50,12 +50,12 @@
     background-repeat: no-repeat;
     cursor: pointer;
     outline: none;
-    
+
     &--orderNow {
-      background-image: url('../../assets/png/order_now.png');
+      background-image: url("../../assets/png/order_now.png");
     }
     &--joinClub {
-      background-image: url('../../assets/png/join_club.png');
+      background-image: url("../../assets/png/join_club.png");
       background-position: bottom;
       display: inline-block;
     }

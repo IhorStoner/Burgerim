@@ -6,10 +6,10 @@ import potatos from '../../assets/png/potatos.png'
 export default function Garnish() {
   return (
     <div className='garnish'>
-      <Title text='Гарниры'/>
+      <Title text='Гарниры' />
       <div className='garnish__content'>
         <div className="garnish__item">
-          <img src={potatos} alt="картошка фри" className="garnish__img"/>
+          <img src={potatos} alt="картошка фри" className="garnish__img" />
           <div className="garnish__textContainer">
             <h2 className="garnish__text">Хрустящий картофель фри</h2>
             <p className="garnish__subText">подается с соусом</p>

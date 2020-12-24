@@ -5,7 +5,6 @@
   &__slide {
     width: 90%;
   }
-
 }
 
 .sliderContainer {
@@ -14,8 +13,8 @@
   padding: 0 50px;
 }
 
-.swiper-pagination-bullet { 
-  --swiper-theme-color: #8F1727 !important;
+.swiper-pagination-bullet {
+  --swiper-theme-color: #8f1727 !important;
 }
 
 .swiper-button-prev {
@@ -25,15 +24,15 @@
   width: 45px !important;
   height: 45px !important;
   z-index: 1000 !important;
-  color: black !important;  
+  color: black !important;
 
   &::after {
-    content: ' ' !important;
+    content: " " !important;
     width: 30px !important;
     height: 30px !important;
     display: block !important;
-    background: url('../../assets/svg/arrowleft.svg') !important;
-    background-repeat: no-repeat !important; 
+    background: url("../../assets/svg/arrowleft.svg") !important;
+    background-repeat: no-repeat !important;
     background-size: contain !important;
     background-position: center !important;
   }
@@ -47,16 +46,14 @@
   height: 45px !important;
   z-index: 1000 !important;
   color: black !important;
-   
-
 
   &::after {
-    content: ' ' !important;
+    content: " " !important;
     width: 30px !important;
     height: 30px !important;
     display: block !important;
-    background: url('../../assets/svg/arrowright.svg') !important;
-    background-repeat: no-repeat !important; 
+    background: url("../../assets/svg/arrowright.svg") !important;
+    background-repeat: no-repeat !important;
     background-size: contain !important;
     background-position: center !important;
   }

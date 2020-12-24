@@ -1,10 +1,10 @@
 import React from 'react'
 import './Header.scss'
 import { useDispatch } from 'react-redux'
-import {openPopup} from '../../redux/actions/popUpAction'
+import { openPopup } from '../../redux/actions/popUpAction'
 
 export default function Header() {
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   return (
     <div className='container'>

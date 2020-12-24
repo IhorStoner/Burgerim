@@ -13,7 +13,7 @@ export default function MenuList() {
         <Burgers />
         <MeatInfo />
         <Garnish />
-        <Drinks/>
+        <Drinks />
       </div>
     </div>
   )

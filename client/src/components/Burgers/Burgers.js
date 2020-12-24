@@ -9,7 +9,7 @@ import './Burgers.scss'
 export default function Burgers() {
   return (
     <div>
-      <Title name='burgers' text='Бургеры'/>
+      <Title name='burgers' text='Бургеры' />
       <div className='burgers__list'>
         <div className="burgers__item">
           <div className="burgers__itemContent">

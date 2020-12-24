@@ -1,6 +1,5 @@
 .meatInfo {
   padding: 50px 0;
-  
 
   &__content {
     display: flex;
@@ -12,7 +11,7 @@
     border: 1px solid #000000;
     padding: 20px 10px;
     width: 350px;
-    
+
     &:nth-child(1) {
       border-right: none;
     }
@@ -25,7 +24,7 @@
   }
 
   &__itemText {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
@@ -43,7 +42,7 @@
 
   &__text {
     color: #000;
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
     font-weight: 900;
     font-size: 26px;
     text-align: center;
@@ -52,15 +51,13 @@
 }
 
 @media (max-width: 414px) {
-  .meatInfo { 
-
+  .meatInfo {
     &__title {
       font-size: 20px;
       padding: 10px 15px;
       max-width: 320px;
     }
     &__item {
-      
       &:nth-child(1) {
         border-right: 1px solid #000;
       }

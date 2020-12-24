@@ -7,17 +7,17 @@
     font-size: 36px;
     line-height: 53px;
     text-align: center;
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
   }
 
   &__text {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
     font-weight: normal;
   }
 
   &__item {
     max-width: 350px;
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: "M PLUS 1p", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -35,11 +35,10 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-
   }
 
   &__price {
-    background-color: #50A362;
+    background-color: #50a362;
     display: inline-block;
     color: #fff;
     padding: 10px 20px;

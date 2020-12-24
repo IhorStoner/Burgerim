@@ -9,14 +9,14 @@ import pig from '../../assets/png/pig.png'
 export default function MeatInfo() {
   return (
     <div className='meatInfo'>
-      <Title text='Вы можете выбрать сет только из одного вида мяса' className='meatInfo__title'/>
+      <Title text='Вы можете выбрать сет только из одного вида мяса' className='meatInfo__title' />
       <p className='meatInfo__text'>Все наши бургеры готовятся на мангале!</p>
       <div className="meatInfo__content">
         <div className="meatInfo__item">
           <div className="meatInfo__imgContainer">
             <img src={chiken} alt="курица" className="meatInfo__img" />
           </div>
-          
+
           <p className="meatInfo__itemText">
             Сочная куриная котлета с добавлением специй
           </p>

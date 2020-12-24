@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  
+
   &__btn {
     background-position: center;
     background-repeat: no-repeat;
@@ -11,26 +11,26 @@
     outline: none;
     background-size: cover;
     background-color: transparent;
-    font-family: 'Averia Sans Libre', cursive;
+    font-family: "Averia Sans Libre", cursive;
     font-size: 44px;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
 
     &--yellow {
-      background-image: url('../../assets/png/yellowBtn.png');
+      background-image: url("../../assets/png/yellowBtn.png");
       width: 236px;
       height: 155px;
       display: block;
     }
 
     &--brown {
-      background-image: url('../../assets/png/brownBtn.png');
+      background-image: url("../../assets/png/brownBtn.png");
       width: 645px;
       height: 155px;
     }
     &--green {
-      background-image: url('../../assets/png/greenBtn.png');
+      background-image: url("../../assets/png/greenBtn.png");
       width: 237px;
       height: 155px;
       display: block;
@@ -69,13 +69,13 @@
       display: block;
 
       &--yellow {
-        background-image: url('../../assets/png/mobBtn1.png');
+        background-image: url("../../assets/png/mobBtn1.png");
       }
       &--brown {
-        background-image: url('../../assets/png/mobBtn2.png');
+        background-image: url("../../assets/png/mobBtn2.png");
       }
       &--green {
-        background-image: url('../../assets/png/mobBtn3.png');
+        background-image: url("../../assets/png/mobBtn3.png");
       }
     }
   }

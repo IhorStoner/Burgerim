@@ -11,10 +11,10 @@ import './Drinks.scss'
 export default function Drinks() {
   return (
     <div className='drinks'>
-      <Title text='Напитки'/>
+      <Title text='Напитки' />
       <div className="drinks__content">
         <div className="drinks__item">
-          <img src={cola} alt="" className="drinks__img"/>
+          <img src={cola} alt="" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Coca-Cola</h2>
             <p className="drinks__text">0.5л</p>
@@ -22,7 +22,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={sprite} alt="" className="drinks__img"/>
+          <img src={sprite} alt="" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Sprite</h2>
             <p className="drinks__text">0.5л</p>
@@ -30,7 +30,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={fanta} alt="" className="drinks__img"/>
+          <img src={fanta} alt="" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Fanta</h2>
             <p className="drinks__text">0.5л</p>
@@ -38,7 +38,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={juice} alt="" className="drinks__img"/>
+          <img src={juice} alt="" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Соки</h2>
             <p className="drinks__text">в асортименте</p>
@@ -46,7 +46,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={water1} alt="" className="drinks__img"/>
+          <img src={water1} alt="" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Моршинська</h2>
             <p className="drinks__text">0.5 б/г</p>
@@ -54,7 +54,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={water2} alt="" className="drinks__img"/>
+          <img src={water2} alt="" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Моршинська</h2>
             <p className="drinks__text">0.5 с/г</p>
