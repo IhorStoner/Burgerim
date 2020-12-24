@@ -61,3 +61,15 @@
     background-position: center !important;
   }
 }
+
+@media (max-width: 414px) {
+  .sliderContainer {
+    padding: 0;
+  }
+  .swiper-button-next {
+    display: none !important;
+  }
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

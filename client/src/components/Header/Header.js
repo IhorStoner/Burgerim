@@ -11,11 +11,11 @@ const dispatch = useDispatch()
       <div className='header'>
         <div className="header__btnsContainer">
           <button className="header__btn header__btn--orderNow" onClick={() => dispatch(openPopup())}></button>
-          <button className="header__btn header__btn--joinClub"></button>
+          <a href='#burgers' className="header__btn header__btn--joinClub"></a>
         </div>
         <div className="header__logoContainer">
           <div className="header__logoLine"></div>
-          <div className="header__logo"></div>
+          <a href='/index.html' className="header__logo"></a>
           <div className="header__logoLine"></div>
         </div>
       </div>

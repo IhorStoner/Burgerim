@@ -1,0 +1,63 @@
+.drinks {
+  padding: 50px 0;
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    font-family: 'M PLUS 1p', sans-serif;
+  }
+
+  &__text {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: normal;
+  }
+
+  &__item {
+    max-width: 350px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000;
+    text-align: center;
+    margin-right: 325px;
+    margin-bottom: 60px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+  }
+
+  &__price {
+    background-color: #50A362;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 39px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 414px) {
+  .drinks {
+    &__item {
+      margin-right: auto;
+      margin-left: auto;
+
+      &:nth-child(3n) {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}

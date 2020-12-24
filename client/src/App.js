@@ -5,6 +5,7 @@ import OrderButtons from './components/OrderButtons/OrderButtons'
 import OrderPopup from './components/OrderPopup/OrderPopup';
 import createStore from './redux/createStore';
 import { Provider } from 'react-redux'
+import MenuList from './components/MenuList/MenuList'
 
 const store = createStore();
 
@@ -15,6 +16,7 @@ function App() {
       <Slider />
       <OrderButtons/>
       <OrderPopup />
+      <MenuList />
     </Provider>
   );
 }

@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0
-  ;
+  padding: 20px 0;
+  
   &__btn {
     background-position: center;
     background-repeat: no-repeat;
@@ -21,6 +21,7 @@
       background-image: url('../../assets/png/yellowBtn.png');
       width: 236px;
       height: 155px;
+      display: block;
     }
 
     &--brown {
@@ -33,6 +34,49 @@
       width: 237px;
       height: 155px;
       display: block;
+    }
+  }
+}
+
+.orderBtnsMobile {
+  display: none;
+}
+
+@media (max-width: 414px) {
+  .orderBtns {
+    display: none;
+  }
+
+  .orderBtnsMobile {
+    display: block;
+
+    &__btnContainer {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__btn {
+      width: 235px;
+      height: 105px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      margin: 0 auto;
+      text-align: center;
+      display: block;
+
+      &--yellow {
+        background-image: url('../../assets/png/mobBtn1.png');
+      }
+      &--brown {
+        background-image: url('../../assets/png/mobBtn2.png');
+      }
+      &--green {
+        background-image: url('../../assets/png/mobBtn3.png');
+      }
     }
   }
 }

@@ -20,8 +20,18 @@ function TextField({
   const message = error || warning;
   return (
     <Form.Field className='formContent'>
+
+      <Input
+        className='formInput'
+
+        label={label}
+        type={type}
+        loading={asyncValidating}
+        {...input}
+        {...rest}
+      />
       {touched && message &&
-        <Label 
+        <Label
           className='formLabel'
           basic
           color={labelColor}
@@ -30,15 +40,6 @@ function TextField({
           {message}
         </Label>
       }
-      <Input
-        className='formInput'
-        label={label}
-        type={type}
-        loading={asyncValidating}
-        {...input}
-        {...rest}
-      />
-
     </Form.Field>
   )
 }

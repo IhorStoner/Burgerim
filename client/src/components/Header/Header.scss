@@ -34,11 +34,15 @@
 
   &__btnsContainer {
     margin-right: 100px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__btn {
-    height: 75px;
-    width: 70px;
+    height: 100px;
+    width: 90px;
     background-color: transparent;
     border: none;
     background-size: cover;
@@ -53,6 +57,40 @@
     &--joinClub {
       background-image: url('../../assets/png/join_club.png');
       background-position: bottom;
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .header {
+    &__btnsContainer {
+      display: none;
+    }
+
+    &__logoLine {
+      display: none;
+    }
+
+    &__logo {
+      width: 230px;
+      height: 60px;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__logoContainer {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 1268px) {
+  .header {
+    &__logoLine {
+      width: 100px;
     }
   }
 }

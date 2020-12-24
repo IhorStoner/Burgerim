@@ -10,7 +10,7 @@ export default function OrderPopup() {
 
   const onSubmit = useCallback(async values => {
     await axios.post(`${config.apiUrl}/api/orderForm`,values)
-    dispatch(openPopup)
+    dispatch(openPopup())
   },[])
   
   return (

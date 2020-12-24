@@ -1,4 +1,4 @@
 {
-  "port": 5000,
-  "apiUrl": "test"
+  "port": 80,
+  "apiUrl": "http://burgerim.org"
 }
