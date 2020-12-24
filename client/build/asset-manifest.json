@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3b49c31b.chunk.css",
+    "main.js": "/static/js/main.fc0b29cb.chunk.js",
+    "main.js.map": "/static/js/main.fc0b29cb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.be35951e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.be35951e.js.map",
+    "static/css/2.d4b354d9.chunk.css": "/static/css/2.d4b354d9.chunk.css",
+    "static/js/2.4613a548.chunk.js": "/static/js/2.4613a548.chunk.js",
+    "static/js/2.4613a548.chunk.js.map": "/static/js/2.4613a548.chunk.js.map",
+    "static/js/3.f8f92ed1.chunk.js": "/static/js/3.f8f92ed1.chunk.js",
+    "static/js/3.f8f92ed1.chunk.js.map": "/static/js/3.f8f92ed1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.d4b354d9.chunk.css.map": "/static/css/2.d4b354d9.chunk.css.map",
+    "static/css/main.3b49c31b.chunk.css.map": "/static/css/main.3b49c31b.chunk.css.map",
+    "static/js/2.4613a548.chunk.js.LICENSE.txt": "/static/js/2.4613a548.chunk.js.LICENSE.txt",
+    "static/media/Slider.scss": "/static/media/arrowright.20b063ae.svg",
+    "static/media/banner1.779d29f3.png": "/static/media/banner1.779d29f3.png",
+    "static/media/banner2.e51cad30.png": "/static/media/banner2.e51cad30.png",
+    "static/media/Header.scss": "/static/media/blogo1.e4180733.svg",
+    "static/media/box1.144b1343.png": "/static/media/box1.144b1343.png",
+    "static/media/box2.0f0a2409.png": "/static/media/box2.0f0a2409.png",
+    "static/media/box3.8376b9ab.png": "/static/media/box3.8376b9ab.png",
+    "static/media/box4.3d0ddf89.png": "/static/media/box4.3d0ddf89.png",
+    "static/media/cola.f9b92126.png": "/static/media/cola.f9b92126.png",
+    "static/media/fanta.3db62c2c.png": "/static/media/fanta.3db62c2c.png",
+    "static/media/FormOrder.scss": "/static/media/formBg.4b11b302.png",
+    "static/media/juice.11bad2ca.png": "/static/media/juice.11bad2ca.png",
+    "static/media/potatos.1f0eaa4b.png": "/static/media/potatos.1f0eaa4b.png",
+    "static/media/sprite.be0e0000.png": "/static/media/sprite.be0e0000.png",
+    "static/media/water1.226ccbc1.png": "/static/media/water1.226ccbc1.png",
+    "static/media/water2.d9dd065b.png": "/static/media/water2.d9dd065b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be35951e.js",
+    "static/css/2.d4b354d9.chunk.css",
+    "static/js/2.4613a548.chunk.js",
+    "static/css/main.3b49c31b.chunk.css",
+    "static/js/main.fc0b29cb.chunk.js"
+  ]
+}
