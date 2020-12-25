@@ -41,8 +41,8 @@ const httpsOptions = {
 
 
 const redirectHttp = express();
-redirectHttp.get('/', (req,res) => {
-  res.redirect(config.get(apiUrl))
+redirectHttp.get('*', (req,res) => {
+  res.redirect('https://burgerim.org')
 })
 
 async function start () {
