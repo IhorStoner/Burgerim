@@ -55,8 +55,21 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 750px) {
   .garnish {
+    &__img {
+      margin-right: 0;
+    }
+    &__content {
+      text-align: center;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
     &__textContainer {
       margin-right: 0;
     }

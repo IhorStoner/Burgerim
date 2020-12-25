@@ -24,9 +24,15 @@ export default function OrderButtons() {
         <div className="orderBtns__btnContainer"><a className={language === 'RU' ? 'orderBtns__btn orderBtns__btn--green' : 'orderBtns__btn orderBtns__btn--greenUkr'}></a></div>
       </div>
       <div className="orderBtnsMobile">
-        <div className="orderBtnsMobile__btnContainer"><button className="orderBtnsMobile__btn orderBtnsMobile__btn--brown" onClick={() => dispatch(openPopup())}></button></div>
-        <div className="orderBtnsMobile__btnContainer"><Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className="orderBtnsMobile__btn orderBtnsMobile__btn--yellow"/></div>
-        <div className="orderBtnsMobile__btnContainer"><a className="orderBtnsMobile__btn orderBtnsMobile__btn--green" href='tel:+1234567890'></a></div>
+        <div className="orderBtnsMobile__btnContainer">
+          <button className={language === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--brown" : "orderBtnsMobile__btn orderBtnsMobile__btn--brownUkr"} onClick={() => dispatch(openPopup())}></button>
+        </div>
+        <div className="orderBtnsMobile__btnContainer">
+          <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className="orderBtnsMobile__btn orderBtnsMobile__btn--yellow"/>
+        </div>
+        <div className="orderBtnsMobile__btnContainer">
+          <a className={language === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--green" : "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr"} href='tel:+1234567890'></a>
+        </div>
       </div>
     </div>
   )

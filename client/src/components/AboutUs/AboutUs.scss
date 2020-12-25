@@ -28,9 +28,10 @@ $main-fontFamily: "M PLUS 1p", sans-serif;
  }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 750px) {
   .aboutUs {
     padding: 20px 5px 0 5px;
+
     &__list {
       padding-left: 20px;
     }

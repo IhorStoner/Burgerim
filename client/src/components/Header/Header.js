@@ -14,7 +14,7 @@ export default function Header() {
     <div className='container'>
       <div className='header'>
         <div className="header__btnsContainer">
-          <button className="header__btn header__btn--orderNow" onClick={() => dispatch(openPopup())}></button>
+          <button className= {language === 'RU' ? "header__btn header__btn--orderNow" : "header__btn header__btn--orderUkr"} onClick={() => dispatch(openPopup())}></button>
           <Link
            smooth={true}
            duration={500}

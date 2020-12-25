@@ -81,6 +81,13 @@
       text-align: center;
       display: block;
 
+      &--brownUkr {
+        background-image: url("../../assets/png/mobOrderBtnUkr.png");
+      }
+      &--greenUkr {
+        background-image: url("../../assets/png/mobPhoneBtnUkr.png");
+      }
+
       &--yellow {
         background-image: url("../../assets/png/mobBtn3.png");
       }

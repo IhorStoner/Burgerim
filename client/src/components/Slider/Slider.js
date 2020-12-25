@@ -15,6 +15,8 @@ import banner1Ukr from '../../assets/png/banner1Ukr.png'
 import banner2Ukr from '../../assets/png/banner2Ukr.png'
 import { useSelector } from 'react-redux';
 import { getLanguage } from '../../redux/selectors/languageSelector';
+import mobSlideUkr1 from '../../assets/png/firstSlideUkr.png'
+import mobSlideUkr2 from '../../assets/png/secondSlideUkr.png'
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
@@ -42,8 +44,8 @@ const language = useSelector(getLanguage)
         autoplay={{ delay: 3000 }}
         loop={true}
       >
-        <SwiperSlide ><img src={mobSlide1} className='mobile-slider__slide'/></SwiperSlide>
-        <SwiperSlide><img src={mobSlide2} className='mobile-slider__slide'/></SwiperSlide>
+        <SwiperSlide ><img src={language === 'RU' ? mobSlide1 : mobSlideUkr1} className='mobile-slider__slide'/></SwiperSlide>
+        <SwiperSlide><img src={language === 'RU' ? mobSlide2 : mobSlideUkr2} className='mobile-slider__slide'/></SwiperSlide>
       </Swiper>
     </div>
   )

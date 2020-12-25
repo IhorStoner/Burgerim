@@ -47,7 +47,27 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width:1395px) {
+  .drinks {
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin-right: auto;
+      margin-left: auto;
+      &:nth-child(3n) {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
   .drinks {
     &__item {
       margin-right: auto;
