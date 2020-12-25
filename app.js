@@ -6,6 +6,7 @@ require('express-async-errors');
 const apiRouter = require('./routes');
 const config = require('config');
 const https = require('https')
+const http = require('http')
 const fs = require('fs');
 
 const app = express();
@@ -38,8 +39,17 @@ const httpsOptions = {
   cert: fs.readFileSync(path.resolve(__dirname, './ssl/fullchain.pem')) // путь к сертификату
 }
 
+
+const redirectHttp = express();
+redirectHttp.get('/', (req,res) => {
+  res.redirect(config.get(apiUrl))
+})
+
 async function start () {
   try {
+    redirectHttp.listen(80, () => {
+      console.log('http server run in 80 port');
+    })
     https.createServer(httpsOptions, app).listen(PORT, () => {
       console.log(`Server is running on ${PORT} port`)
     });
