@@ -9,10 +9,17 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
+import mobSlide2 from '../../assets/png/mobSlideburger.png'
+import mobSlide1 from '../../assets/png/firstSlide.png'
+import banner1Ukr from '../../assets/png/banner1Ukr.png'
+import banner2Ukr from '../../assets/png/banner2Ukr.png'
+import { useSelector } from 'react-redux';
+import { getLanguage } from '../../redux/selectors/languageSelector';
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 export default function Slider() {
+const language = useSelector(getLanguage)
 
   return (
     <div className='sliderContainer'>
@@ -24,8 +31,19 @@ export default function Slider() {
         autoplay={{ delay: 3000 }}
         loop={true}
       >
-        <SwiperSlide><img src={banner1} className='sliderImg__slide' /></SwiperSlide>
-        <SwiperSlide><img src={banner2} className='sliderImg__slide' /></SwiperSlide>
+        <SwiperSlide><img src={language === 'RU' ? banner1 : banner1Ukr} className='sliderImg__slide' alt='Сочный и вкусный бургер на мангале'/></SwiperSlide>
+        <SwiperSlide><img src={language === 'RU' ? banner2 : banner2Ukr} className='sliderImg__slide' alt='Быстрая доставка по Одессе'/></SwiperSlide>
+      </Swiper>
+      <Swiper className='mobile-slider'
+        navigation
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000 }}
+        loop={true}
+      >
+        <SwiperSlide ><img src={mobSlide1} className='mobile-slider__slide'/></SwiperSlide>
+        <SwiperSlide><img src={mobSlide2} className='mobile-slider__slide'/></SwiperSlide>
       </Swiper>
     </div>
   )

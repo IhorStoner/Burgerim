@@ -7,14 +7,18 @@ import water1 from '../../assets/png/water1.png'
 import water2 from '../../assets/png/water2.png'
 import sprite from '../../assets/png/sprite.png'
 import './Drinks.scss'
+import { useSelector } from 'react-redux'
+import { getLanguage } from '../../redux/selectors/languageSelector'
 
 export default function Drinks() {
+  const language = useSelector(getLanguage)
+
   return (
     <div className='drinks'>
-      <Title text='Напитки' />
+      <Title text={language === 'RU' ? 'Напитки' : 'НАПОЇ'} />
       <div className="drinks__content">
         <div className="drinks__item">
-          <img src={cola} alt="" className="drinks__img" />
+          <img src={cola} alt="Кока кола" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Coca-Cola</h2>
             <p className="drinks__text">0.5л</p>
@@ -22,7 +26,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={sprite} alt="" className="drinks__img" />
+          <img src={sprite} alt="Спрайт" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Sprite</h2>
             <p className="drinks__text">0.5л</p>
@@ -30,7 +34,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={fanta} alt="" className="drinks__img" />
+          <img src={fanta} alt="Фанта" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Fanta</h2>
             <p className="drinks__text">0.5л</p>
@@ -38,15 +42,15 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={juice} alt="" className="drinks__img" />
+          <img src={juice} alt="Соки" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Соки</h2>
-            <p className="drinks__text">в асортименте</p>
+            <p className="drinks__text">{language === 'RU' ? 'в ассортименте' : 'в асортименті'}</p>
             <span className="drinks__price">20 грн</span>
           </div>
         </div>
         <div className="drinks__item">
-          <img src={water1} alt="" className="drinks__img" />
+          <img src={water1} alt="Моршинська без газа" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Моршинська</h2>
             <p className="drinks__text">0.5 б/г</p>
@@ -54,7 +58,7 @@ export default function Drinks() {
           </div>
         </div>
         <div className="drinks__item">
-          <img src={water2} alt="" className="drinks__img" />
+          <img src={water2} alt="Моршинська сильногазована" className="drinks__img" />
           <div className="drinks__textContainer">
             <h2 className="drinks__title">Моршинська</h2>
             <p className="drinks__text">0.5 с/г</p>

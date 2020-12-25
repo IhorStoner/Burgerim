@@ -6,6 +6,7 @@ import './FormOrder.scss'
 import { isOpenPopUp } from '../../redux/selectors/popUpSelector'
 import { useDispatch } from 'react-redux'
 import { openPopup } from '../../redux/actions/popUpAction'
+import { getLanguage } from '../../redux/selectors/languageSelector'
 
 function FormOrder({ handleSubmit, valid, submitting }) {
   const isOpenPopup = useSelector(isOpenPopUp)
@@ -15,7 +16,8 @@ function FormOrder({ handleSubmit, valid, submitting }) {
   const [nameValid, setNameValid] = useState(false);
   const [phoneValid, setPhoneValid] = useState(false);
   const [formValid, setFormValid] = useState(false)
-
+  const language = useSelector(getLanguage)
+  
   useEffect(() => {
     if (errors) {
       if (!errors.name) {
@@ -35,11 +37,6 @@ function FormOrder({ handleSubmit, valid, submitting }) {
     }
   }, [formData])
 
-
-
-
-
-
   return (
     <div>
       {
@@ -49,14 +46,14 @@ function FormOrder({ handleSubmit, valid, submitting }) {
             <button className='formOrder__btnClose' onClick={() => dispatch(openPopup())}></button>
             <div className="formOrder__content">
               <div className='formOrder__row'>
-                <div className='formOrder__text'>Имя:</div>
-                <Field className={!nameValid ? 'formOrder__input--red' : 'formOrder__input'} name='name' component={TextField} placeholder='Имя'></Field>
+                <div className='formOrder__text'>{language === 'RU' ? 'Имя:' : 'Iм\'я:'}</div>
+                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={language === 'RU' ? 'Имя:' : 'Iм\'я:'}></Field>
               </div>
               <div className='formOrder__row'>
                 <div className='formOrder__text'>Телефон:</div>
-                <Field className={!phoneValid ? 'formOrder__input--red' : 'formOrder__input'} name='phone' component={TextField} placeholder='Телефон'></Field>
+                <Field className={!phoneValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='phone' component={TextField} placeholder='Телефон'></Field>
               </div>
-              <button className='formOrder__btnSubmit' type='submit' disabled={!valid && !submitting}>Отправить</button>
+              <button className='formOrder__btnSubmit' type='submit' disabled={!valid && !submitting}>{language === 'RU' ? 'Отправить' : 'ВІДПРАВИТИ'}</button>
             </div>
           </form>
         </div>
@@ -75,7 +72,7 @@ const validate = values => {
   if (!values.name) {
     errors.name = 'Обязательно'
   }
-  const regPhone = /^((\+)?(3)?(8)?[\- ]?)?(\(?\d{3}\)?[\- ]?)?\d{3}[\- ]?\d{2}[\- ]?\d{2}$/
+  const regPhone = /^((\+?3)?8)?((0\(\d{2}\)?)|(\(0\d{2}\))|(0\d{2}))\d{7}$/
   if (!regPhone.test(values.phone)) {
     errors.phone = 'Не правильный телефон'
   }

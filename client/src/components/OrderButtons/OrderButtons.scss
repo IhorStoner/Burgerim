@@ -17,6 +17,19 @@
     text-transform: uppercase;
     cursor: pointer;
 
+    &--ukrBrown {
+      background-image: url("../../assets/png/btnBrownUkr.png");
+      width: 655px;
+      height: 155px;
+    }
+
+    &--greenUkr {
+      background-image: url("../../assets/png/greenUkr.png");
+      width: 240px;
+      height: 155px;
+      display: block;
+    }
+
     &--yellow {
       background-image: url("../../assets/png/yellowBtn.png");
       width: 236px;
@@ -26,12 +39,12 @@
 
     &--brown {
       background-image: url("../../assets/png/brownBtn.png");
-      width: 645px;
+      width: 655px;
       height: 155px;
     }
     &--green {
       background-image: url("../../assets/png/greenBtn.png");
-      width: 237px;
+      width: 240px;
       height: 155px;
       display: block;
     }
@@ -69,13 +82,13 @@
       display: block;
 
       &--yellow {
-        background-image: url("../../assets/png/mobBtn1.png");
+        background-image: url("../../assets/png/mobBtn3.png");
       }
       &--brown {
-        background-image: url("../../assets/png/mobBtn2.png");
+        background-image: url("../../assets/png/mobBtn1.png");
       }
       &--green {
-        background-image: url("../../assets/png/mobBtn3.png");
+        background-image: url("../../assets/png/mobBtn2.png");
       }
     }
   }

@@ -54,3 +54,11 @@
     margin-top: 22px;
   }
 }
+
+@media (max-width: 414px) {
+  .garnish {
+    &__textContainer {
+      margin-right: 0;
+    }
+  }
+}
