@@ -34,8 +34,8 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || config.get('port') || 443
 
 const httpsOptions = {
-  key: fs.readFileSync(__dirname + '../etc/letsencrypt/live/burgerim.org/privkey.pem'), // путь к ключу
-  cert: fs.readFileSync(__dirname + '../etc/letsencrypt/live/burgerim.org/cert.pem') // путь к сертификату
+  key: fs.readFileSync(path.resolve(__dirname, './ssl/privkey.pem')), // путь к ключу
+  cert: fs.readFileSync(path.resolve(__dirname, './ssl/fullchain.pem')) // путь к сертификату
 }
 
 async function start () {
