@@ -31,7 +31,7 @@ app.use((err, req, res, next) => {
     .send({ error: err.message })
 });
 
-const PORT = process.env.PORT || config.get('port') || 5000
+const PORT = process.env.PORT || config.get('port') || 443
 
 const httpsOptions = {
   key: fs.readFileSync(__dirname + '../etc/letsencrypt/live/burgerim.org/privkey.pem'), // путь к ключу
