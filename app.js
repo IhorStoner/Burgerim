@@ -5,14 +5,13 @@ const bodyParser = require('body-parser');
 require('express-async-errors');
 const apiRouter = require('./routes');
 const config = require('config');
-
+const https = require('https')
+const fs = require('fs');
 
 const app = express();
 
 app.use(cors());
-
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(bodyParser.json());
 
 app.use('/api', apiRouter);
@@ -34,9 +33,14 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || config.get('port') || 5000
 
+const httpsOptions = {
+  key: fs.readFileSync(__dirname + '../etc/letsencrypt/live/burgerim.org/privkey.pem'), // путь к ключу
+  cert: fs.readFileSync(__dirname + '../etc/letsencrypt/live/burgerim.org/cert.pem') // путь к сертификату
+}
+
 async function start () {
   try {
-    app.listen(PORT, () => {
+    https.createServer(httpsOptions, app).listen(PORT, () => {
       console.log(`Server is running on ${PORT} port`)
     });
   }

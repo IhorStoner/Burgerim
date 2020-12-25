@@ -3,14 +3,14 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
   &__item {
     border: 1px solid #000000;
     padding: 20px 10px;
-    width: 347px;
+    width: 340px;
 
     &:nth-child(1) {
       border-right: none;
