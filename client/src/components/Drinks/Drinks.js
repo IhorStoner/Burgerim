@@ -52,7 +52,7 @@ export default function Drinks() {
         <div className="drinks__item">
           <img src={water1} alt="Моршинська без газа" className="drinks__img" />
           <div className="drinks__textContainer">
-            <h2 className="drinks__title">Моршинська</h2>
+            <h2 className="drinks__title">{language === 'RU' ? 'Моршинская' : 'Моршинська'}</h2>
             <p className="drinks__text">0.5 б/г</p>
             <span className="drinks__price">15 грн</span>
           </div>
@@ -60,7 +60,7 @@ export default function Drinks() {
         <div className="drinks__item">
           <img src={water2} alt="Моршинська сильногазована" className="drinks__img" />
           <div className="drinks__textContainer">
-            <h2 className="drinks__title">Моршинська</h2>
+            <h2 className="drinks__title">{language === 'RU' ? 'Моршинская' : 'Моршинська'}</h2>
             <p className="drinks__text">0.5 с/г</p>
             <span className="drinks__price">15 грн</span>
           </div>

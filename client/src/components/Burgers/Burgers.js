@@ -40,7 +40,7 @@ export default function Burgers() {
             <div className="burgers__imgContainer">
               <img className="burgers__img" src={box3} alt="Бургеры 8 штук" />
             </div>
-            <div className='burgers__count'>8 шт.</div>
+            <div className='burgers__count'>6 шт.</div>
             <p>{language === 'RU' ? 'Сет из 8-ми бургеров для вас и ваших друзей' : 'Набір з 8 гамбургерів для вас та ваших друзів'}</p>
             <p className="burgers__price">300 грн</p>
           </div>
@@ -50,7 +50,7 @@ export default function Burgers() {
             <div className="burgers__imgContainer">
               <img className="burgers__img" src={box4} alt="Бургеры 16 штук" />
             </div>
-            <div className='burgers__count'>16 шт.</div>
+            <div className='burgers__count'>12 шт.</div>
             <p>{language === 'RU' ? 'Сет из 16-ти бургеров для большой компании' : 'Сет з 16-ти бургерів для великої компанії'} </p>
             <p className="burgers__price">550 грн</p>
           </div>

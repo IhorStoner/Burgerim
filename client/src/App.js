@@ -17,8 +17,8 @@ function App() {
       <Slider />
       <OrderButtons/>
       <OrderPopup />
-      <AboutUs />
       <MenuList />
+      
       <Footer/>
     </Provider>
   );
