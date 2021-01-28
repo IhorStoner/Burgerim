@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { reduxForm, Field } from 'redux-form'
 import TextField from '../TextField/TextField'
 import { useSelector } from 'react-redux'
-import './FormOrder.scss'
+import './FormOrderPopup.scss'
 import { isOpenPopUp } from '../../redux/selectors/popUpSelector'
 import { useDispatch } from 'react-redux'
 import { openPopup } from '../../redux/actions/popUpAction'
 import { getLanguage } from '../../redux/selectors/languageSelector'
 
-function FormOrder({ handleSubmit, valid, submitting }) {
+function FormOrderPopup({ handleSubmit, valid, submitting }) {
   const isOpenPopup = useSelector(isOpenPopUp)
   const dispatch = useDispatch();
   const formData = useSelector(state => state.form.formOrder)
@@ -86,4 +86,4 @@ const validate = values => {
 export default reduxForm({
   form: "formOrder",
   validate
-})(FormOrder);
+})(FormOrderPopup);

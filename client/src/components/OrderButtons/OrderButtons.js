@@ -31,7 +31,7 @@ export default function OrderButtons() {
           <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className="orderBtnsMobile__btn orderBtnsMobile__btn--yellow"/>
         </div>
         <div className="orderBtnsMobile__btnContainer">
-          <a className={language === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--green" : "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr"} href='tel:+1234567890'></a>
+          <a className={language === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--green" : "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr"} href='tel:+380965136694'></a>
         </div>
       </div>
     </div>

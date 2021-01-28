@@ -1,58 +1,83 @@
 import React from 'react'
-import box1 from '../../assets/png/box1.png'
-import box2 from '../../assets/png/box2.png'
-import box3 from '../../assets/png/box3.png'
-import box4 from '../../assets/png/box4.png'
+import burger from '../../assets/png/burger.png'
 import Title from '../Title/Title'
 import './Burgers.scss'
 import { getLanguage } from '../../redux/selectors/languageSelector'
 import { useSelector } from 'react-redux'
+import InputNumber from '../InputNumber/InputNumber'
+import {changeCountChicken,changeCountTurkey,changeCountBeef,changeCountPork} from '../../redux/actions/orderAction'
+import { getOrder } from '../../redux/selectors/orderSelector'
 
 export default function Burgers() {
   const language = useSelector(getLanguage)
+  const order = useSelector(getOrder);
 
   return (
     <div>
       <Title name='burgers' text={language === 'RU' ? 'Бургеры' : 'Бургери'} />
       <div className='burgers__list'>
         <div className="burgers__item">
-          <div className="burgers__itemContent">
-            <div className="burgers__imgContainer">
-              <img className="burgers__img" src={box1} alt="Бургеры 2 штуки" />
-            </div>
-            <div className='burgers__count'>2 шт.</div>
-            <p>{language === 'RU' ? 'Сет из 2-х бургеров  для быстрого перекуса' : 'Набір з 2 гамбургерів для швидкого перекусу'}</p>
-            <p className="burgers__price">80 грн</p>
+          <div className="burgers__imgContainer">
+            <img src={burger} alt="бургер" className="burgers__img" />
+          </div>
+          <p className="burgers__itemText">
+            Сочная куриная котлета с добавлением специй
+          </p>
+          <div className="burgers__itemCounter">
+            за
+            <InputNumber action={changeCountChicken} defaultVal={order.chicken}/>
+            шт.
+          </div>
+          <div className="burgers__price">
+            {order.chickenPrice} грн
           </div>
         </div>
         <div className="burgers__item">
-          <div className="burgers__itemContent">
-            <div className="burgers__imgContainer">
-              <img className="burgers__img" src={box2} alt="Бургеры 3 штуки" />
-            </div>
-            <div className='burgers__count'>3 шт.</div>
-            <p>{language === 'RU' ? 'Сет из 3-х бургеров для сытного обеда' : 'Набір з 3 гамбургерів для ситного обіду	'}</p>
-            <p className="burgers__price">110 грн</p>
+          <div className="burgers__imgContainer">
+            <img src={burger} alt="бургер" className="burgers__img" />
+          </div>
+          <p className="burgers__itemText">
+            Диетическая котлета из индейки
+          </p>
+          <div className="burgers__itemCounter">
+            за
+            <InputNumber action={changeCountTurkey} defaultVal={order.turkey}/>
+            шт.
+          </div>
+          <div className="burgers__price">
+          {order.turkeyPrice} грн
           </div>
         </div>
         <div className="burgers__item">
-          <div className="burgers__itemContent">
-            <div className="burgers__imgContainer">
-              <img className="burgers__img" src={box3} alt="Бургеры 8 штук" />
-            </div>
-            <div className='burgers__count'>6 шт.</div>
-            <p>{language === 'RU' ? 'Сет из 8-ми бургеров для вас и ваших друзей' : 'Набір з 8 гамбургерів для вас та ваших друзів'}</p>
-            <p className="burgers__price">300 грн</p>
+          <div className="burgers__imgContainer">
+            <img src={burger} alt="бургер" className="burgers__img" />
+          </div>
+          <p className="burgers__itemText">
+            Аппетитная котлета из говядины
+          </p>
+          <div className="burgers__itemCounter">
+            за
+            <InputNumber action={changeCountBeef} defaultVal={order.beef}/>
+            шт.
+          </div>
+          <div className="burgers__price">
+            {order.beefPrice} грн
           </div>
         </div>
         <div className="burgers__item">
-          <div className="burgers__itemContent">
-            <div className="burgers__imgContainer">
-              <img className="burgers__img" src={box4} alt="Бургеры 16 штук" />
-            </div>
-            <div className='burgers__count'>12 шт.</div>
-            <p>{language === 'RU' ? 'Сет из 16-ти бургеров для большой компании' : 'Сет з 16-ти бургерів для великої компанії'} </p>
-            <p className="burgers__price">550 грн</p>
+          <div className="burgers__imgContainer">
+            <img src={burger} alt="бургер" className="burgers__img" />
+          </div>
+          <p className="burgers__itemText">
+            Сытная котлета из свинины
+          </p>
+          <div className="burgers__itemCounter">
+            за
+            <InputNumber action={changeCountPork} defaultVal={order.pork}/>
+            шт.
+          </div>
+          <div className="burgers__price">
+            {order.porkPrice} грн
           </div>
         </div>
       </div>

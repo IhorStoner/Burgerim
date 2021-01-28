@@ -1,31 +1,32 @@
-$main-fontFamily: "M PLUS 1p", sans-serif;
+$main-fontFamily: "Roboto";
 
 .aboutUs {
- padding: 50px 0;
+  padding: 30px 0;
 
- &__list-title {
-   margin-bottom: 20px;
- }
+  &__list-title {
+    margin-bottom: 20px;
+  }
 
- &__list {
-   text-align: left;
-   padding-left: 150px;
- }
+  &__list {
+    text-align: left;
+    padding-left: 150px;
+  }
 
- &__content { 
-    color: #6A151F;
+  &__content {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 41px;
+    color: #7b1a20;
     text-align: center;
     font-family: $main-fontFamily;
     font-style: normal;
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 52px;
     margin-bottom: 40px;
 
     &:last-child {
       margin-bottom: 0;
     }
- }
+  }
 }
 
 @media (max-width: 750px) {

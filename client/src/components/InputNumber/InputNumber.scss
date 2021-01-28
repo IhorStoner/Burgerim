@@ -1,0 +1,63 @@
+.InputNumber {
+  position: relative;
+  display: inline-block;
+
+  width: 100px;
+  &__input {
+    font-family: "Roboto";
+    color: #555555;
+    font-size: 26px;
+    background: #ffffff;
+    box-shadow: 1px 1px 13px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding-right: 45px;
+    padding: 5px 45px 5px 5px;
+    position: relative;
+    width: 100%;
+  }
+
+  &__btnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 16px;
+    background-color: #C4C4C4;
+
+    &--top {
+      background-image: url('../../assets/svg/arrowTop.svg');
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom: 1px solid #9B9B9B;
+    }
+    &--bot {
+      background-image: url('../../assets/svg/arrowBot.svg');
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}

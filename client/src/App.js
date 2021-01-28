@@ -18,7 +18,6 @@ function App() {
       <OrderButtons/>
       <OrderPopup />
       <MenuList />
-      
       <Footer/>
     </Provider>
   );
