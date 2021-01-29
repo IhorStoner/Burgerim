@@ -13,6 +13,8 @@ import mobSlide2 from '../../assets/png/mobSlideburger.png'
 import mobSlide1 from '../../assets/png/firstSlide.png'
 import banner1Ukr from '../../assets/png/banner1Ukr.png'
 import banner2Ukr from '../../assets/png/banner2Ukr.png'
+import banner1eng from '../../assets/png/banner1eng.png'
+import banner2eng from '../../assets/png/banner2eng.png'
 import { useSelector } from 'react-redux';
 import { getLanguage } from '../../redux/selectors/languageSelector';
 import mobSlideUkr1 from '../../assets/png/firstSlideUkr.png'
@@ -30,11 +32,11 @@ const language = useSelector(getLanguage)
         spaceBetween={50}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 5000 }}
         loop={true}
       >
-        <SwiperSlide><img src={language === 'RU' ? banner1 : banner1Ukr} className='sliderImg__slide' alt='Сочный и вкусный бургер на мангале'/></SwiperSlide>
-        <SwiperSlide><img src={language === 'RU' ? banner2 : banner2Ukr} className='sliderImg__slide' alt='Быстрая доставка по Одессе'/></SwiperSlide>
+        <SwiperSlide><img src={language === 'RUS' && banner1 || language === 'UKR' && banner1Ukr || language === 'ENG' && banner1eng} className='sliderImg__slide' alt='Сочный и вкусный бургер на мангале' /></SwiperSlide>
+        <SwiperSlide><img src={language === 'RUS' && banner2 || language === 'UKR' && banner2Ukr || language === 'ENG' && banner2eng} className='sliderImg__slide' alt='Быстрая доставка по Одессе' /></SwiperSlide>
       </Swiper>
       <Swiper className='mobile-slider'
         navigation

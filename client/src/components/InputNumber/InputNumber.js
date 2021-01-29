@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './InputNumber.scss'
 import {useDispatch} from 'react-redux'
 
-export default function InputNumber({action, defaultVal}) {
+export default function InputNumber({action, defaultVal,className}) {
   const [value, setValue] = useState(defaultVal)
   const dispatch = useDispatch()
   const min = 0;
@@ -45,7 +45,7 @@ export default function InputNumber({action, defaultVal}) {
   }
 
   return (
-    <div className='InputNumber'>
+    <div className={`InputNumber ${className}`}>
       <input className='InputNumber__input' type="number" minlength="0" defaultValue={defaultVal} value={value} onChange={(e) => handleChangeInput(e)}/>
       <div className="InputNumber__btnContainer">
         <button className="InputNumber__btn InputNumber__btn--top"

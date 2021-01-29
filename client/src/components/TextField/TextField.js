@@ -23,7 +23,6 @@ function TextField({
 
       <Input
         className='formInput'
-
         label={label}
         type={type}
         loading={asyncValidating}

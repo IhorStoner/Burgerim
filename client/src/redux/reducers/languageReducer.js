@@ -2,12 +2,12 @@ import { createReducer } from "@reduxjs/toolkit";
 import { changeLanguage } from '../actions/languageAction';
 
 const initialState = {
-  language: 'RU',
+  language: 'RUS',
 };
 
 const languageReducer = createReducer(initialState, {
   [changeLanguage.type]: (state, action) => {
-   state.language = state.language === 'RU' ? 'UKR' : 'RU';
+   state.language = action.payload;
   }
 });
 

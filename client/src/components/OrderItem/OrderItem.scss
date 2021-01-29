@@ -37,3 +37,21 @@
     padding: 14px 23px;
   }
 }
+
+@media (max-width: 750px) {
+  .OrderItem {
+    padding: 5px 10px;
+
+    &__count {
+      font-size: 20px;
+    }
+    &__price {
+      font-size: 20px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+
+}

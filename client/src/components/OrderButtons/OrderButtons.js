@@ -7,7 +7,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function OrderButtons() {
   const dispatch = useDispatch();
-  const language = useSelector(getLanguage)
+  const lng = useSelector(getLanguage)
 
   return (
     <div className="container">
@@ -18,20 +18,20 @@ export default function OrderButtons() {
           duration={500}
           spy={true}
           offset={-70}
-          to='burgers' className="orderBtns__btn orderBtns__btn--yellow"/>
+          to='burgers' className={`orderBtns__btn ${lng === 'ENG' ? 'orderBtns__btn--yellowEng' : 'orderBtns__btn--yellow'}`}/>
         </div>
-        <div className="orderBtns__btnContainer"><button className={language === 'RU' ? 'orderBtns__btn orderBtns__btn--brown' : 'orderBtns__btn orderBtns__btn--ukrBrown'} onClick={() => dispatch(openPopup())}></button></div>
-        <div className="orderBtns__btnContainer"><a className={language === 'RU' ? 'orderBtns__btn orderBtns__btn--green' : 'orderBtns__btn orderBtns__btn--greenUkr'}></a></div>
+        <div className="orderBtns__btnContainer"><Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className={`orderBtns__btn ${lng === 'RUS' && 'orderBtns__btn--brown' || lng === 'UKR' && 'orderBtns__btn--ukrBrown' || lng === 'ENG' && 'orderBtns__btn--brownEng'}`} /></div>
+        <div className="orderBtns__btnContainer"><a className={`orderBtns__btn ${lng === 'RUS' && 'orderBtns__btn--green' || lng === 'UKR' && 'orderBtns__btn--greenUkr' || lng === 'ENG' && 'orderBtns__btn--greenEng'}`}></a></div>
       </div>
       <div className="orderBtnsMobile">
         <div className="orderBtnsMobile__btnContainer">
-          <button className={language === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--brown" : "orderBtnsMobile__btn orderBtnsMobile__btn--brownUkr"} onClick={() => dispatch(openPopup())}></button>
+          <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className={lng === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--brown" : "orderBtnsMobile__btn orderBtnsMobile__btn--brownUkr"} />
         </div>
         <div className="orderBtnsMobile__btnContainer">
           <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className="orderBtnsMobile__btn orderBtnsMobile__btn--yellow"/>
         </div>
         <div className="orderBtnsMobile__btnContainer">
-          <a className={language === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--green" : "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr"} href='tel:+380965136694'></a>
+          <a className={lng === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--green" : "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr"} href='tel:+380965136694'></a>
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
 .burgers {
   &__list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -9,7 +10,9 @@
     box-shadow: -2px 11px 12px 1px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
     padding: 20px 10px 10px 10px;
-    margin-right: 70px;
+    margin-right: 50px;
+    position: relative;
+    min-width: 310px;
 
     &:last-child {
       margin-right: 0;
@@ -36,6 +39,7 @@
     min-height: 96px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   &__itemCounter {
@@ -72,11 +76,81 @@
     padding: 14px 23px;
     margin: 0 auto;
   }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: -40px;
+    width: 112px;
+    height: 112px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--chicken {
+      background-image: url('../../assets/png/chiken.png');
+    }
+    &--turkey {
+      background-image: url('../../assets/png/turkey.png');
+    }
+    &--cow {
+      background-image: url('../../assets/png/cow.png');
+    }
+    &--pig {
+      background-image: url('../../assets/png/pig.png');
+    }
+  }
+
+  &__input {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__title {
+    margin-bottom: 76px;
+  }
 }
 
 
 
+@media (max-width: 1399px) {
+  .burgers {
+    &__list {
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    &__item {
+      margin-bottom: 32px;
+      margin-right: 160px;
+
+      &:last-child {
+        margin-right: 160px;
+      }
+   
+    }
+
+  }
+}
+
 @media (max-width: 750px) {
   .burgers {
+    &__list {
+      margin: 0 auto;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      margin: 0 auto;
+      margin-bottom: 60px;
+
+      &:last-child {
+        margin: 0 auto;
+        margin-bottom: 0;
+      }
+   
+    }
+
   }
 }

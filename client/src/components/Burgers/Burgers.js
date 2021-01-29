@@ -5,79 +5,84 @@ import './Burgers.scss'
 import { getLanguage } from '../../redux/selectors/languageSelector'
 import { useSelector } from 'react-redux'
 import InputNumber from '../InputNumber/InputNumber'
-import {changeCountChicken,changeCountTurkey,changeCountBeef,changeCountPork} from '../../redux/actions/orderAction'
+import { changeCountChicken, changeCountTurkey, changeCountBeef, changeCountPork } from '../../redux/actions/orderAction'
 import { getOrder } from '../../redux/selectors/orderSelector'
 
 export default function Burgers() {
-  const language = useSelector(getLanguage)
+  const lng = useSelector(getLanguage)
   const order = useSelector(getOrder);
-
+  {/* {lng === 'RUS' && 'text' || lng === 'UKR' && 'text' || lng === 'ENG' && 'text'} */ }
   return (
     <div>
-      <Title name='burgers' text={language === 'RU' ? 'Бургеры' : 'Бургери'} />
+      <Title name='burgers' text={lng === 'RUS' && 'Бургеры' || lng === 'UKR' && 'Бургери' || lng === 'ENG' && 'Burgers'} className='burgers__title' />
       <div className='burgers__list'>
         <div className="burgers__item">
+          <div className="burgers__icon burgers__icon--chicken"></div>
           <div className="burgers__imgContainer">
             <img src={burger} alt="бургер" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
-            Сочная куриная котлета с добавлением специй
+            {lng === 'RUS' && 'Чикен Бургер' || lng === 'UKR' && 'Чікен Бургер' || lng === 'ENG' && 'Chicken Burger'}
+
           </p>
           <div className="burgers__itemCounter">
-            за
-            <InputNumber action={changeCountChicken} defaultVal={order.chicken}/>
-            шт.
+            {lng === 'ENG' ? 'for' : 'за'}
+            <InputNumber action={changeCountChicken} defaultVal={order.chicken} className='burgers__input' />
+            {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
-            {order.chickenPrice} грн
+            {order.chickenPrice} {lng === 'ENG' ? 'uah' : 'грн'}
           </div>
         </div>
         <div className="burgers__item">
+          <div className="burgers__icon burgers__icon--turkey"></div>
           <div className="burgers__imgContainer">
             <img src={burger} alt="бургер" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
-            Диетическая котлета из индейки
+            {lng === 'RUS' && 'Бургер из индейки' || lng === 'UKR' && 'Бургер з індички' || lng === 'ENG' && 'Turkey burger'}
           </p>
           <div className="burgers__itemCounter">
-            за
-            <InputNumber action={changeCountTurkey} defaultVal={order.turkey}/>
-            шт.
+            {lng === 'ENG' ? 'for' : 'за'}
+            <InputNumber action={changeCountTurkey} defaultVal={order.turkey} className='burgers__input' />
+            {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
-          {order.turkeyPrice} грн
+            {order.turkeyPrice} {lng === 'ENG' ? 'uah' : 'грн'}
           </div>
         </div>
         <div className="burgers__item">
+          <div className="burgers__icon burgers__icon--cow"></div>
           <div className="burgers__imgContainer">
             <img src={burger} alt="бургер" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
-            Аппетитная котлета из говядины
+            {lng === 'RUS' && 'Классический бургер' || lng === 'UKR' && 'Класичний бургер' || lng === 'ENG' && 'Classic Burger'}
           </p>
           <div className="burgers__itemCounter">
-            за
-            <InputNumber action={changeCountBeef} defaultVal={order.beef}/>
-            шт.
+            {lng === 'ENG' ? 'for' : 'за'}
+            <InputNumber action={changeCountBeef} defaultVal={order.beef} className='burgers__input' />
+            {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
-            {order.beefPrice} грн
+            {order.beefPrice} {lng === 'ENG' ? 'uah' : 'грн'}
           </div>
         </div>
         <div className="burgers__item">
+          <div className="burgers__icon burgers__icon--pig"></div>
           <div className="burgers__imgContainer">
             <img src={burger} alt="бургер" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
-            Сытная котлета из свинины
+            {lng === 'RUS' && 'Свинной бургер' || lng === 'UKR' && 'Бургер з свинини' || lng === 'ENG' && 'Pork burger'}
           </p>
           <div className="burgers__itemCounter">
-            за
-            <InputNumber action={changeCountPork} defaultVal={order.pork}/>
-            шт.
+            {lng === 'ENG' ? 'for' : 'за'}
+            <InputNumber action={changeCountPork} defaultVal={order.pork} className='burgers__input' />
+            {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
-            {order.porkPrice} грн
+            {order.porkPrice} {lng === 'ENG' ? 'uah' : 'грн'}
           </div>
         </div>
       </div>

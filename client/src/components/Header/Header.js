@@ -14,15 +14,23 @@ export default function Header() {
     <div className='container'>
       <div className='header'>
         <div className="header__btnsContainer">
-          <button className= {language === 'RU' ? "header__btn header__btn--orderNow" : "header__btn header__btn--orderUkr"} onClick={() => dispatch(openPopup())}></button>
           <Link
-           smooth={true}
-           duration={500}
-           spy={true}
-           offset={-70}
-           to='burgers' 
-           className="header__btn header__btn--joinClub"
-           />
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-70}
+            to='burgers'
+            className={` header__btn  ${language === 'RUS' && "header__btn--orderNow"} ${language === 'UKR' && 'header__btn--orderUkr'} ${language === 'ENG' && 'header__btn--orderEng'}`}
+          />
+         
+          <Link
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-70}
+            to='burgers'
+            className={`header__btn ${language === 'ENG' ? 'header__btn--joinClubEng' : 'header__btn--joinClub'}`}
+          />
         </div>
         <div className="header__logoContainer">
           <div className="header__logoLine"></div>
@@ -30,7 +38,13 @@ export default function Header() {
           <div className="header__logoLine"></div>
         </div>
         <div className="header__lang-container ">
-          <button className="header__lang-btn" onClick={() => dispatch(changeLanguage())}>{language === 'UKR' ? 'RU' : 'UKR'}</button>
+          <div className="header__selectedLang">{language}</div>
+          <ul className="header__langList">
+            <li className={`header__langItem ${language === 'RUS' && 'header__langItem--active'}`} onClick={() => dispatch(changeLanguage('RUS'))}>RUS</li>
+            <li className={`header__langItem ${language === 'UKR' && 'header__langItem--active'}`} onClick={() => dispatch(changeLanguage('UKR'))}>UKR</li>
+            <li className={`header__langItem ${language === 'ENG' && 'header__langItem--active'}`} onClick={() => dispatch(changeLanguage('ENG'))}>ENG</li>
+          </ul>
+          {/* <button className="header__lang-btn" onClick={() => dispatch(changeLanguage())}>{language === 'UKR' ? 'RU' : 'UKR'}</button> */}
           {/* <button onClick={() => dispatch(changeLanguage())}>UA</button> */}
         </div>
       </div>

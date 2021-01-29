@@ -3,8 +3,7 @@ require('express-async-errors')
 const orderRouter = Router();
 const nodemailer = require("nodemailer");
 
-orderRouter.post('/', async(req,res) => {
-
+orderRouter.post('/', async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     secure: false, // true for 465, false for other ports
@@ -23,12 +22,14 @@ orderRouter.post('/', async(req,res) => {
     html: `
     <h2>Имя: ${req.body.name}</h2>
     <p>Номер заказа: ${Date.now()}</p>
-    <a href="tel:${req.body.phone}">Телефон: ${req.body.phone} </ a>
-    ${req.body.chicken !== 0 && `<div>Курица: ${req.body.chicken}шт</div>`}
-    ${req.body.turkey !== 0 && `<div>Индюшка: ${req.body.turkey}шт</div>`}
-    ${req.body.beef !== 0 && `<div>Говядина: ${req.body.beef}шт</div>`}
-    ${req.body.pork !== 0 && `<div>Свинина: ${req.body.pork}шт</div>`}
-    ${req.body.totalPrice !== 0 && `<div>Сумма: ${req.body.totalPrice}грн</div>`}
+    <a href="tel:${req.body.phone}">Телефон: ${req.body.phone} </a>
+    <div>
+      <div>Курица: ${req.body.chicken}шт</div>
+      <div>Индюшка: ${req.body.turkey}шт</div>
+      <div>Говядина: ${req.body.beef}шт</div>
+      <div>Свинина: ${req.body.pork}шт</div>
+      <div>Сумма: ${req.body.totalPrice}грн</div>
+    </div>
     `
   });
 

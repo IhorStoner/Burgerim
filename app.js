@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
     .send({ error: err.message })
 });
 
-const PORT = process.env.PORT || config.get('port') || 443
+const PORT = process.env.PORT || 5000
 
 const httpsOptions = {
   key: fs.readFileSync(path.resolve(__dirname, './ssl/privkey.pem')), // путь к ключу

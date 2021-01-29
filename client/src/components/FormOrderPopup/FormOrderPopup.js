@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { reduxForm, Field } from 'redux-form'
+import { reduxForm, Field,formValueSelector,formValues  } from 'redux-form'
 import TextField from '../TextField/TextField'
 import { useSelector } from 'react-redux'
 import './FormOrderPopup.scss'
 import { isOpenPopUp } from '../../redux/selectors/popUpSelector'
-import { useDispatch } from 'react-redux'
+import { useDispatch,connect } from 'react-redux'
 import { openPopup } from '../../redux/actions/popUpAction'
 import { getLanguage } from '../../redux/selectors/languageSelector'
+import { getOrder } from '../../redux/selectors/orderSelector'
+import { changeCountChicken } from '../../redux/actions/orderAction'
 
 function FormOrderPopup({ handleSubmit, valid, submitting }) {
   const isOpenPopup = useSelector(isOpenPopUp)
@@ -16,8 +18,9 @@ function FormOrderPopup({ handleSubmit, valid, submitting }) {
   const [nameValid, setNameValid] = useState(false);
   const [phoneValid, setPhoneValid] = useState(false);
   const [formValid, setFormValid] = useState(false)
-  const language = useSelector(getLanguage)
-  
+  const lng = useSelector(getLanguage)
+  const order = useSelector(getOrder)
+
   useEffect(() => {
     if (errors) {
       if (!errors.name) {
@@ -46,14 +49,14 @@ function FormOrderPopup({ handleSubmit, valid, submitting }) {
             <button className='formOrder__btnClose' onClick={() => dispatch(openPopup())}></button>
             <div className="formOrder__content">
               <div className='formOrder__row'>
-                <div className='formOrder__text'>{language === 'RU' ? 'Имя:' : 'Iм\'я:'}</div>
-                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={language === 'RU' ? 'Имя:' : 'Iм\'я:'}></Field>
+                <div className='formOrder__text'>{lng === 'RUS' && 'Имя:' || lng === 'UKR' && 'Iм\'я:' || lng === 'ENG' && 'Name:'}</div>
+                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={lng === 'RUS' && 'Имя:' || lng === 'UKR' && 'Iм\'я:' || lng === 'ENG' && 'Name:'}></Field>
               </div>
               <div className='formOrder__row'>
-                <div className='formOrder__text'>Телефон:</div>
-                <Field className={!phoneValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='phone' component={TextField} placeholder='Телефон'></Field>
+                <div className='formOrder__text'>{lng === 'RUS' && 'Телефон:' || lng === 'UKR' && 'Телефон:' || lng === 'ENG' && 'Phone:'}</div>
+                <Field className={!phoneValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='phone' value='1' component={TextField} placeholder={lng === 'RUS' && 'Телефон:' || lng === 'UKR' && 'Телефон:' || lng === 'ENG' && 'Phone:'}></Field>
               </div>
-              <button className='formOrder__btnSubmit' type='submit' disabled={!valid && !submitting}>{language === 'RU' ? 'Отправить' : 'ВІДПРАВИТИ'}</button>
+              <button className='formOrder__btnSubmit' type='submit' disabled={!valid && !submitting}>{lng === 'RUS' && 'Отправить' || lng === 'UKR' && 'ВІДПРАВИТИ' || lng === 'ENG' && 'Send'}</button>
             </div>
           </form>
         </div>
@@ -82,8 +85,26 @@ const validate = values => {
   return errors
 }
 
-
-export default reduxForm({
+FormOrderPopup = reduxForm({
   form: "formOrder",
-  validate
+  validate,
 })(FormOrderPopup);
+
+FormOrderPopup = connect(
+  state => ({
+    initialValues: {
+      chicken: state.order.chicken,
+      turkey: state.order.turkey,
+      beef: state.order.beef,
+      pork: state.order.pork,
+      totalPrice: state.order.totalPrice,
+    },
+    enableReinitialize: true,
+  }),
+  
+)(FormOrderPopup)
+
+
+export default FormOrderPopup
+
+

@@ -4,21 +4,18 @@ import { getLanguage } from '../../redux/selectors/languageSelector'
 import { useSelector } from 'react-redux'
 
 export default function Footer() {
-  const language = useSelector(getLanguage)
+  const lng = useSelector(getLanguage)
 
   return (
     <div className='footer'>
-      <div className="container">
-        {
-          language === 'RU' ?
-          "Burgerim - быстрая доставка вкусных и сочных бургеров в Одессе. Заказывайте сеты бургеров по 2, 3, 8 и 16 шт в упаковке - детям в школу, на обед в офис или в дорогу. Звоните или оставляйте заявку на сайте."
-          :
-          'Burgerim - швидка доставка смачних і соковитих бургерів в Одесі. Замовляйте сети бургерів по 2, 3, 8 і 16 шт в упаковці - дітям до школи, на обід в офіс або в дорогу. Телефонуйте або залишайте заявку на сайті.'
-        }
-        <p>Номер: +380665544332</p>
-        <p>Успенская 23</p>
-        <p>©Burgerim, 2021</p>
-      </div>
+      {
+        lng === 'RUS' &&
+          "Burgerim - быстрая доставка вкусных и сочных бургеров в Одессе. Мы спасем Вас от голода. Для заказа звоните или оставляйте заявку на сайте."
+          || lng === 'UKR' &&
+          'Burgerim - швидка доставка смачних і соковитих бургерів в Одесі. Ми врятуємо Вас від голоду. Для замовлення телефонуйте або залишайте заявку на сайті.'
+          || lng === 'ENG' && 
+          `Burgerim - fast delivery of delicious and juicy burgers in Odessa. We will save you from hunger. To order, call or leave a request on the website.`
+      }
     </div>
   )
 }

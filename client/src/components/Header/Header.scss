@@ -1,11 +1,90 @@
 .header {
-  padding: 25px 0;
+  padding: 20px 0 85px 0;
   display: flex;
   justify-content: flex-start;
+
+  &__selectedLang {
+    font-family: "M PLUS 1p";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 36px;
+    color: #6a151f;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      margin-left: 5px;
+      width: 28px;
+      height: 28px;
+      background-image: url("../../assets/svg/arrowLang.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+  }
+
+  &__langList {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(106, 21, 31, 1);
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px 25px;
+    top: 42px;
+    left: 42px;
+    position: absolute;
+
+    &:before {
+      content: "";
+      width: 16px;
+      height: 19px;
+      display: block;
+      position: absolute;
+      background-image: url("../../assets/svg/langIcon.svg");
+      top: -14px;
+      left: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__langItem {
+    list-style-type: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &--active {
+      &:after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+    }
+  }
 
   &__lang-container {
     align-self: center;
     margin-left: 15px;
+    position: relative;
+    &:hover > .header__langList {
+      display: flex;
+    }
   }
 
   &__lang-btn {
@@ -14,7 +93,7 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
-    color: #6A151F;
+    color: #6a151f;
     background-color: transparent;
     outline: none;
     cursor: pointer;
@@ -59,8 +138,8 @@
   }
 
   &__btn {
-    height: 100px;
-    width: 90px;
+    height: 90px;
+    width: 80px;
     background-color: transparent;
     border: none;
     background-size: contain;
@@ -72,12 +151,18 @@
     &--orderUkr {
       background-image: url("../../assets/png/btnOrderUkr.png");
     }
+    &--orderEng {
+      background-image: url("../../assets/png/orderEng.png");
+    }
 
     &--orderNow {
       background-image: url("../../assets/png/order_now.png");
     }
     &--joinClub {
       background-image: url("../../assets/png/join_club.png");
+    }
+    &--joinClubEng {
+      background-image: url("../../assets/png/menuEng.png");
     }
   }
 }
