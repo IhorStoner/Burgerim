@@ -13,8 +13,8 @@ export default function OrderPopup() {
     console.log(values)
     await axios.post(`${config.apiUrl}/api/orderForm`, values).then(res => {
       localStorage.removeItem('burgerimCart')
-      // dispatch(openPopup())
-      window.location.reload();
+      dispatch(openPopup())
+      // window.location.reload();
     })
   }, [])
 
