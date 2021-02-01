@@ -23,7 +23,6 @@ orderRouter.post('/', async (req, res) => {
     <h2>Имя: ${req.body.name}</h2>
     <p>Номер заказа: ${Date.now()}</p>
     <a href="tel:${req.body.phone}">Телефон: ${req.body.phone} </a>
-    <div>${req.body}</div>
     <div>Курица: ${req.body.chicken}шт</div>
     <div>Индюшка: ${req.body.turkey}шт</div>
     <div>Говядина: ${req.body.beef}шт</div>
