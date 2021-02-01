@@ -8,6 +8,6 @@ export default () => {
     middleware: getDefaultMiddleware().concat([
       orderLocalstorage
     ]),
-    devTools: true,
+    devTools: false,
   })
 };
