@@ -29,7 +29,6 @@ export default function OrderListInfo() {
   return (
     <section className='OrderListInfo'>
       <form className={`OrderListInfo__form ${order.totalPrice === 0 && 'OrderListInfo__form--empty'}`}>
-        {/* <img className="OrderListInfo__bg" src={bg}></img> */}
         {order.totalPrice !== 0 && <Title text={lng === 'RUS' && 'Ваш заказ' || lng === 'UKR' && 'Ваше замовлення' || lng === 'ENG' && 'Your order'} className='OrderListInfo__formTitle' />}
         {order.totalPrice === 0 ?
           <div className='OrderListInfo__orderEmpty'>
@@ -67,7 +66,7 @@ export default function OrderListInfo() {
               {order.turkey !== 0 && <OrderItem title={lng === 'RUS' && 'Бургер с индейки' || lng === 'UKR' && 'Бургер з індички' || lng === 'ENG' && 'Turkey burger'} count={order.turkey} price={order.turkeyPrice} className='OrderListInfo__item' />}
               {order.beef !== 0 && <OrderItem title={lng === 'RUS' && 'Классический бургер' || lng === 'UKR' && 'Класичний бургер' || lng === 'ENG' && 'Classic burger'} count={order.beef} price={order.beefPrice} className='OrderListInfo__item' />}
               {order.pork !== 0 && <OrderItem title={lng === 'RUS' && 'Свинной бургер' || lng === 'UKR' && 'Бургер з свинини' || lng === 'ENG' && 'Pork burger'} count={order.pork} price={order.porkPrice} className='OrderListInfo__item' />}
-              {isWarningOpen && <div className='OrderListInfo__warning'>*Минимальное количество для заказа 2 бургера</div>}
+              {isWarningOpen && <div className='OrderListInfo__warning'>{lng === 'RUS' && '*Минимальное количество для заказа 2 бургера' || lng === 'UKR' && '*Мінімальна кількість для замовлення 2 бургера' || lng === 'ENG' && '*Minimal amount to replace 2 burgers'}</div>}
             </div>
             <div className="OrderListInfo__price">
               {lng === 'RUS' && 'Сумма:' || lng === 'UKR' && 'Сума:' || lng === 'ENG' && 'Amount:'} {order.totalPrice} {lng === 'ENG' ? 'uah' : 'грн'}

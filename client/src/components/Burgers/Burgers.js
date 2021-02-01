@@ -19,7 +19,7 @@ export default function Burgers() {
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--chicken"></div>
           <div className="burgers__imgContainer">
-            <img src={burger} alt="бургер" className="burgers__img" />
+            <img src={burger} alt="бургер куриный, чикен бургер" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
             {lng === 'RUS' && 'Чикен Бургер' || lng === 'UKR' && 'Чікен Бургер' || lng === 'ENG' && 'Chicken Burger'}
@@ -37,7 +37,7 @@ export default function Burgers() {
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--turkey"></div>
           <div className="burgers__imgContainer">
-            <img src={burger} alt="бургер" className="burgers__img" />
+            <img src={burger} alt="бургер из индейки" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
             {lng === 'RUS' && 'Бургер из индейки' || lng === 'UKR' && 'Бургер з індички' || lng === 'ENG' && 'Turkey burger'}
@@ -54,7 +54,7 @@ export default function Burgers() {
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--cow"></div>
           <div className="burgers__imgContainer">
-            <img src={burger} alt="бургер" className="burgers__img" />
+            <img src={burger} alt="бургер классический" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
             {lng === 'RUS' && 'Классический бургер' || lng === 'UKR' && 'Класичний бургер' || lng === 'ENG' && 'Classic Burger'}
@@ -71,7 +71,7 @@ export default function Burgers() {
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--pig"></div>
           <div className="burgers__imgContainer">
-            <img src={burger} alt="бургер" className="burgers__img" />
+            <img src={burger} alt="бургер свинной" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
             {lng === 'RUS' && 'Свинной бургер' || lng === 'UKR' && 'Бургер з свинини' || lng === 'ENG' && 'Pork burger'}

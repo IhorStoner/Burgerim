@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { reduxForm, Field,formValueSelector,formValues  } from 'redux-form'
+import { reduxForm, Field } from 'redux-form'
 import TextField from '../TextField/TextField'
 import { useSelector } from 'react-redux'
 import './FormOrderPopup.scss'

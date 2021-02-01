@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { openPopup } from '../../redux/actions/popUpAction'
 import { changeLanguage } from '../../redux/actions/languageAction'
 import { getLanguage } from '../../redux/selectors/languageSelector'
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -15,6 +14,7 @@ export default function Header() {
       <div className='header'>
         <div className="header__btnsContainer">
           <Link
+            href='#!'
             smooth={true}
             duration={500}
             spy={true}
@@ -22,8 +22,8 @@ export default function Header() {
             to='burgers'
             className={` header__btn  ${language === 'RUS' && "header__btn--orderNow"} ${language === 'UKR' && 'header__btn--orderUkr'} ${language === 'ENG' && 'header__btn--orderEng'}`}
           />
-         
           <Link
+            href='#!'
             smooth={true}
             duration={500}
             spy={true}
@@ -44,8 +44,6 @@ export default function Header() {
             <li className={`header__langItem ${language === 'UKR' && 'header__langItem--active'}`} onClick={() => dispatch(changeLanguage('UKR'))}>UKR</li>
             <li className={`header__langItem ${language === 'ENG' && 'header__langItem--active'}`} onClick={() => dispatch(changeLanguage('ENG'))}>ENG</li>
           </ul>
-          {/* <button className="header__lang-btn" onClick={() => dispatch(changeLanguage())}>{language === 'UKR' ? 'RU' : 'UKR'}</button> */}
-          {/* <button onClick={() => dispatch(changeLanguage())}>UA</button> */}
         </div>
       </div>
     </div>

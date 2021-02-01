@@ -17,7 +17,7 @@ export default function OrderPopup() {
       dispatch(clearOrder())
       dispatch(orderSuccess(true))
     })
-  }, [])
+  })
 
   return (
     <div className='container'>
