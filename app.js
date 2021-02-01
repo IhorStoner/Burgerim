@@ -40,16 +40,16 @@ const httpsOptions = {
 }
 
 
-const redirectHttp = express();
-redirectHttp.get('*', (req,res) => {
-  res.redirect('https://burgerim.org')
-})
+// const redirectHttp = express();
+// redirectHttp.get('*', (req,res) => {
+//   res.redirect('https://burgerim.org')
+// })
 
 async function start () {
   try {
-    redirectHttp.listen(PORT, () => {
-      console.log('http server run in 80 port');
-    })
+    // redirectHttp.listen(80, () => {
+    //   console.log('http server run in 80 port');
+    // })
     https.createServer(httpsOptions, app).listen(PORT, () => {
       console.log(`Server is running on ${PORT} port`)
     });
