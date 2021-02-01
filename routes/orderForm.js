@@ -31,7 +31,7 @@ orderRouter.post('/', async (req, res) => {
     `
   });
 
-  res.status(201).send(req.body.totalPrice);
+  res.status(201).send('Mail send');
 })
 
 

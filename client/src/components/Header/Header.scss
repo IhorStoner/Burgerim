@@ -167,8 +167,13 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .header {
+    padding: 10px 10% 80px 30px;
+    &__lang-container {
+      margin-left: 0;
+    }
+
     &__btnsContainer {
       display: none;
     }

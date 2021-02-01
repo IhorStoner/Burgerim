@@ -19,11 +19,13 @@ import { useSelector } from 'react-redux';
 import { getLanguage } from '../../redux/selectors/languageSelector';
 import mobSlideUkr1 from '../../assets/png/firstSlideUkr.png'
 import mobSlideUkr2 from '../../assets/png/secondSlideUkr.png'
+import mobEngSlide1 from '../../assets/png/mobEngSlide1.png'
+import mobEngSlide2 from '../../assets/png/mobEngSlide2.png'
 
 SwiperCore.use([Navigation, Pagination, Autoplay])
 
 export default function Slider() {
-const language = useSelector(getLanguage)
+const lng = useSelector(getLanguage)
 
   return (
     <div className='sliderContainer'>
@@ -35,8 +37,8 @@ const language = useSelector(getLanguage)
         autoplay={{ delay: 5000 }}
         loop={true}
       >
-        <SwiperSlide><img src={language === 'RUS' && banner1 || language === 'UKR' && banner1Ukr || language === 'ENG' && banner1eng} className='sliderImg__slide' alt='Сочный и вкусный бургер на мангале' /></SwiperSlide>
-        <SwiperSlide><img src={language === 'RUS' && banner2 || language === 'UKR' && banner2Ukr || language === 'ENG' && banner2eng} className='sliderImg__slide' alt='Быстрая доставка по Одессе' /></SwiperSlide>
+        <SwiperSlide><img src={lng === 'RUS' && banner1 || lng === 'UKR' && banner1Ukr || lng === 'ENG' && banner1eng} className='sliderImg__slide' alt='Сочный и вкусный бургер на мангале' /></SwiperSlide>
+        <SwiperSlide><img src={lng === 'RUS' && banner2 || lng === 'UKR' && banner2Ukr || lng === 'ENG' && banner2eng} className='sliderImg__slide' alt='Быстрая доставка по Одессе' /></SwiperSlide>
       </Swiper>
       <Swiper className='mobile-slider'
         navigation
@@ -46,8 +48,8 @@ const language = useSelector(getLanguage)
         autoplay={{ delay: 3000 }}
         loop={true}
       >
-        <SwiperSlide ><img src={language === 'RU' ? mobSlide1 : mobSlideUkr1} className='mobile-slider__slide'/></SwiperSlide>
-        <SwiperSlide><img src={language === 'RU' ? mobSlide2 : mobSlideUkr2} className='mobile-slider__slide'/></SwiperSlide>
+        <SwiperSlide ><img src={lng === 'RUS' && mobSlide1 || lng === 'UKR' && mobSlideUkr1 || lng === 'ENG' && mobEngSlide1} className='mobile-slider__slide'/></SwiperSlide>
+        <SwiperSlide><img src={lng === 'RUS' && mobSlide2 || lng ==='UKR' && mobSlideUkr2 || lng === 'ENG' && mobEngSlide2} className='mobile-slider__slide'/></SwiperSlide>
       </Swiper>
     </div>
   )

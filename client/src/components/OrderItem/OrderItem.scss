@@ -22,6 +22,7 @@
     font-weight: normal;
     font-size: 26px;
     color: #505050;
+    width: 100px;
   }
 
   &__price {
@@ -44,6 +45,7 @@
 
     &__count {
       font-size: 20px;
+      width: 100px;
     }
     &__price {
       font-size: 20px;
@@ -52,6 +54,39 @@
       font-size: 20px;
     }
   }
+}
 
+@media (max-width: 550px) {
+  .OrderItem {
+    padding: 5px 10px;
 
+    &__count {
+      font-size: 14px;
+      word-wrap: normal;
+      width: 85px;
+    }
+    &__price {
+      font-size: 18px;
+      padding: 5px;
+      width: 100px;
+    }
+    &__title {
+      width: 200px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .OrderItem {
+    &__title {
+      font-size: 13px;
+    }
+    &__price {
+      font-size: 13px;
+    }
+    &__count {
+      font-size: 13px;
+    }
+  }
 }

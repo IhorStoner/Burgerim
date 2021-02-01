@@ -25,13 +25,13 @@ export default function OrderButtons() {
       </div>
       <div className="orderBtnsMobile">
         <div className="orderBtnsMobile__btnContainer">
-          <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className={lng === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--brown" : "orderBtnsMobile__btn orderBtnsMobile__btn--brownUkr"} />
+          <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className={lng === 'RUS' && "orderBtnsMobile__btn orderBtnsMobile__btn--brown" || lng === 'UKR' && "orderBtnsMobile__btn orderBtnsMobile__btn--brownUkr" || lng === 'ENG' && "orderBtnsMobile__btn orderBtnsMobile__btn--brownEngMob"} />
         </div>
         <div className="orderBtnsMobile__btnContainer">
-          <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className="orderBtnsMobile__btn orderBtnsMobile__btn--yellow"/>
+          <Link smooth={true} duration={500} spy={true} offset={-70} to='burgers' className={`orderBtnsMobile__btn ${lng === 'ENG' ? 'orderBtnsMobile__btn--yellowMobEng' : 'orderBtnsMobile__btn--yellow'}`}/>
         </div>
         <div className="orderBtnsMobile__btnContainer">
-          <a className={lng === 'RU' ? "orderBtnsMobile__btn orderBtnsMobile__btn--green" : "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr"} href='tel:+380965136694'></a>
+          <a className={lng === 'RUS' && "orderBtnsMobile__btn orderBtnsMobile__btn--green" || lng === 'UKR' && "orderBtnsMobile__btn orderBtnsMobile__btn--greenUkr" || lng === 'ENG' && 'orderBtnsMobile__btn orderBtnsMobile__btn--greenEng'} href='tel:+380965136694'></a>
         </div>
       </div>
     </div>

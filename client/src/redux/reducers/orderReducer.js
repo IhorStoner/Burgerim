@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { changeCountChicken,changeCountTurkey,changeCountBeef,changeCountPork } from '../actions/orderAction';
+import { changeCountChicken,changeCountTurkey,changeCountBeef,changeCountPork,clearOrder } from '../actions/orderAction';
 
 let initialState = {};
 
@@ -43,6 +43,17 @@ const orderReducer = createReducer(initialState, {
     state.pork = action.payload;
     state.porkPrice = action.payload*state.porkOnePrice
     state.totalPrice = state.chickenPrice + state.turkeyPrice + state.beefPrice + state.porkPrice
+  },
+  [clearOrder.type]: (state, action) => {
+    state.chicken = 0;
+    state.chickenPrice = 0;
+    state.turkey = 0;
+    state.turkeyPrice = 0;
+    state.beef = 0;
+    state.beefPrice = 0;
+    state.pork = 0;
+    state.porkPrice = 0;
+    state.totalPrice = 0;
   },
 });
 

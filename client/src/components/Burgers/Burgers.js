@@ -13,7 +13,7 @@ export default function Burgers() {
   const order = useSelector(getOrder);
   {/* {lng === 'RUS' && 'text' || lng === 'UKR' && 'text' || lng === 'ENG' && 'text'} */ }
   return (
-    <div>
+    <div className='container'>
       <Title name='burgers' text={lng === 'RUS' && 'Бургеры' || lng === 'UKR' && 'Бургери' || lng === 'ENG' && 'Burgers'} className='burgers__title' />
       <div className='burgers__list'>
         <div className="burgers__item">
@@ -27,7 +27,7 @@ export default function Burgers() {
           </p>
           <div className="burgers__itemCounter">
             {lng === 'ENG' ? 'for' : 'за'}
-            <InputNumber action={changeCountChicken} defaultVal={order.chicken} className='burgers__input' />
+            <InputNumber action={changeCountChicken} defaultVal={order.chicken} val={order.chicken} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
@@ -44,7 +44,7 @@ export default function Burgers() {
           </p>
           <div className="burgers__itemCounter">
             {lng === 'ENG' ? 'for' : 'за'}
-            <InputNumber action={changeCountTurkey} defaultVal={order.turkey} className='burgers__input' />
+            <InputNumber action={changeCountTurkey} defaultVal={order.turkey} val={order.turkey} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
@@ -61,7 +61,7 @@ export default function Burgers() {
           </p>
           <div className="burgers__itemCounter">
             {lng === 'ENG' ? 'for' : 'за'}
-            <InputNumber action={changeCountBeef} defaultVal={order.beef} className='burgers__input' />
+            <InputNumber action={changeCountBeef} defaultVal={order.beef} val={order.beef} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">
@@ -78,7 +78,7 @@ export default function Burgers() {
           </p>
           <div className="burgers__itemCounter">
             {lng === 'ENG' ? 'for' : 'за'}
-            <InputNumber action={changeCountPork} defaultVal={order.pork} className='burgers__input' />
+            <InputNumber action={changeCountPork} defaultVal={order.pork} val={order.pork} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
           <div className="burgers__price">

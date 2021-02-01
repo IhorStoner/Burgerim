@@ -7,8 +7,7 @@ import { isOpenPopUp } from '../../redux/selectors/popUpSelector'
 import { useDispatch,connect } from 'react-redux'
 import { openPopup } from '../../redux/actions/popUpAction'
 import { getLanguage } from '../../redux/selectors/languageSelector'
-import { getOrder } from '../../redux/selectors/orderSelector'
-import { changeCountChicken } from '../../redux/actions/orderAction'
+
 
 function FormOrderPopup({ handleSubmit, valid, submitting }) {
   const isOpenPopup = useSelector(isOpenPopUp)
@@ -19,7 +18,6 @@ function FormOrderPopup({ handleSubmit, valid, submitting }) {
   const [phoneValid, setPhoneValid] = useState(false);
   const [formValid, setFormValid] = useState(false)
   const lng = useSelector(getLanguage)
-  const order = useSelector(getOrder)
 
   useEffect(() => {
     if (errors) {
@@ -50,11 +48,11 @@ function FormOrderPopup({ handleSubmit, valid, submitting }) {
             <div className="formOrder__content">
               <div className='formOrder__row'>
                 <div className='formOrder__text'>{lng === 'RUS' && 'Имя:' || lng === 'UKR' && 'Iм\'я:' || lng === 'ENG' && 'Name:'}</div>
-                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={lng === 'RUS' && 'Имя:' || lng === 'UKR' && 'Iм\'я:' || lng === 'ENG' && 'Name:'}></Field>
+                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={lng === 'RUS' && 'Имя' || lng === 'UKR' && 'Iм\'я' || lng === 'ENG' && 'Nam:'}></Field>
               </div>
               <div className='formOrder__row'>
                 <div className='formOrder__text'>{lng === 'RUS' && 'Телефон:' || lng === 'UKR' && 'Телефон:' || lng === 'ENG' && 'Phone:'}</div>
-                <Field className={!phoneValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='phone' value='1' component={TextField} placeholder={lng === 'RUS' && 'Телефон:' || lng === 'UKR' && 'Телефон:' || lng === 'ENG' && 'Phone:'}></Field>
+                <Field className={!phoneValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='phone' value='1' component={TextField} placeholder={lng === 'RUS' && 'Телефон' || lng === 'UKR' && 'Телефон' || lng === 'ENG' && 'Phone'}></Field>
               </div>
               <button className='formOrder__btnSubmit' type='submit' disabled={!valid && !submitting}>{lng === 'RUS' && 'Отправить' || lng === 'UKR' && 'ВІДПРАВИТИ' || lng === 'ENG' && 'Send'}</button>
             </div>
