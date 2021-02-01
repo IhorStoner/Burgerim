@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './OrderListInfo.scss'
 import Title from '../Title/Title'
 import OrderItem from '../OrderItem/OrderItem'
@@ -15,10 +15,16 @@ export default function OrderListInfo() {
   const lng = useSelector(getLanguage)
   const dispatch = useDispatch()
   const isOrderSuccess = useSelector(getOrderSuccess)
-
+  const [isWarningOpen,setIsWarningOpen] = useState(false)
   useEffect(() => {
     dispatch(orderSuccess(false))
+    setIsWarningOpen(false)
   }, [order])
+
+  const handleSubmitClick = () => {
+    if(order.totalPrice < 100) setIsWarningOpen(true)
+    if(order.totalPrice >= 100) dispatch(openPopup())
+  }
 
   return (
     <section className='OrderListInfo'>
@@ -53,8 +59,6 @@ export default function OrderListInfo() {
                 </div>
               </div>
             }
-
-
           </div> // if cart empty
           :
           <div>
@@ -63,13 +67,13 @@ export default function OrderListInfo() {
               {order.turkey !== 0 && <OrderItem title={lng === 'RUS' && 'Бургер с индейки' || lng === 'UKR' && 'Бургер з індички' || lng === 'ENG' && 'Turkey burger'} count={order.turkey} price={order.turkeyPrice} className='OrderListInfo__item' />}
               {order.beef !== 0 && <OrderItem title={lng === 'RUS' && 'Классический бургер' || lng === 'UKR' && 'Класичний бургер' || lng === 'ENG' && 'Classic burger'} count={order.beef} price={order.beefPrice} className='OrderListInfo__item' />}
               {order.pork !== 0 && <OrderItem title={lng === 'RUS' && 'Свинной бургер' || lng === 'UKR' && 'Бургер з свинини' || lng === 'ENG' && 'Pork burger'} count={order.pork} price={order.porkPrice} className='OrderListInfo__item' />}
-
+              {isWarningOpen && <div className='OrderListInfo__warning'>*Минимальное количество для заказа 2 бургера</div>}
             </div>
             <div className="OrderListInfo__price">
               {lng === 'RUS' && 'Сумма:' || lng === 'UKR' && 'Сума:' || lng === 'ENG' && 'Amount:'} {order.totalPrice} {lng === 'ENG' ? 'uah' : 'грн'}
             </div>
             <div className="OrderListInfo__btnContainer">
-              <button type='button' className="OrderListInfo__btn" onClick={() => dispatch(openPopup())}>{lng === 'RUS' && 'Оформить заказ' || lng === 'UKR' && 'Оформити замовлення' || lng === 'ENG' && 'Checkout'}</button>
+              <button type='button' className="OrderListInfo__btn" onClick={() => handleSubmitClick()}>{lng === 'RUS' && 'Оформить заказ' || lng === 'UKR' && 'Оформити замовлення' || lng === 'ENG' && 'Checkout'}</button>
             </div>
           </div>
 

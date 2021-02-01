@@ -49,7 +49,7 @@ redirectHttp.get('*', (req,res) => {
 async function start () {
   try {
     redirectHttp.listen(HTTP_PORT, () => {
-      console.log('http server run in 80 port');
+      console.log(`http server run in ${HTTP_PORT} port`);
     })
     https.createServer(httpsOptions, app).listen(PORT, () => {
       console.log(`Server is running on ${PORT} port`)

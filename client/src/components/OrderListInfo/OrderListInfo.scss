@@ -1,6 +1,10 @@
 .OrderListInfo {
   padding: 50px 0;
 
+  &__warning {
+    color: rgba(143, 22, 37, 1);
+  }
+
   &__form {
     background: url("../../assets/png/order.png") center top;
     min-height: 970px;
@@ -117,7 +121,9 @@
 
 @media (max-width: 569px) {
   .OrderListInfo {
-
+    &__warning {
+      font-size: 16px;
+    }
     &__orderEmpty {
       font-size: 20px;
     }
