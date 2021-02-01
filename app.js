@@ -32,7 +32,7 @@ app.use((err, req, res, next) => {
     .send({ error: err.message })
 });
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || config.get('port') || 443
 
 const httpsOptions = {
   key: fs.readFileSync(path.resolve(__dirname, './ssl/privkey.pem')), // путь к ключу
@@ -47,7 +47,7 @@ redirectHttp.get('*', (req,res) => {
 
 async function start () {
   try {
-    redirectHttp.listen(80, () => {
+    redirectHttp.listen(PORT, () => {
       console.log('http server run in 80 port');
     })
     https.createServer(httpsOptions, app).listen(PORT, () => {
