@@ -48,7 +48,7 @@ function FormOrderPopup({ handleSubmit, valid, submitting }) {
             <div className="formOrder__content">
               <div className='formOrder__row'>
                 <div className='formOrder__text'>{lng === 'RUS' && 'Имя:' || lng === 'UKR' && 'Iм\'я:' || lng === 'ENG' && 'Name:'}</div>
-                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={lng === 'RUS' && 'Имя' || lng === 'UKR' && 'Iм\'я' || lng === 'ENG' && 'Nam:'}></Field>
+                <Field className={!nameValid ? 'formOrder__input--red formOrder__input' : 'formOrder__input'} name='name' component={TextField} placeholder={lng === 'RUS' && 'Имя' || lng === 'UKR' && 'Iм\'я' || lng === 'ENG' && 'Name'}></Field>
               </div>
               <div className='formOrder__row'>
                 <div className='formOrder__text'>{lng === 'RUS' && 'Телефон:' || lng === 'UKR' && 'Телефон:' || lng === 'ENG' && 'Phone:'}</div>
