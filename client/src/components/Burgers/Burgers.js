@@ -57,7 +57,7 @@ export default function Burgers() {
             <img src={burger} alt="бургер классический" className="burgers__img" />
           </div>
           <p className="burgers__itemText">
-            {lng === 'RUS' && 'Классический бургер' || lng === 'UKR' && 'Класичний бургер' || lng === 'ENG' && 'Classic Burger'}
+            {lng === 'RUS' && 'Бургер из говядины' || lng === 'UKR' && 'Бургер з яловичини' || lng === 'ENG' && 'Beef burger'}
           </p>
           <div className="burgers__itemCounter">
             {lng === 'ENG' ? 'for' : 'за'}
