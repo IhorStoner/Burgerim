@@ -12,15 +12,15 @@ export default function AboutUs() {
         <div className="aboutUs__content">
           {
             lng === 'RUS' &&
-              `Burgerim – это наша лаборатория по изготовлению мини-бургеров в Одессе. Мы используем только местные продукты от проверенных поставщиков, а также эксклюзивную рецептуру котлет, что позволяет нам превратить фаст-фуд в произведение кулинарного искусства. В нашем меню бургеры из 4-х видов мяса, так что каждый сможет найти свой по вкусу.
-              Нежная булочка с хрустящей корочкой, свежие овощи и зелень, огурчики и горячая сочная котлета, способны разнообразить Ваш перекус, а также утолить голод. Для корпоративных клиентов - приятные скидки.  `
+              `Burgerim- это вкусные, небольшие гамбургеры по доступной цене с быстрой доставкой. Оформите заказ на нашем сайте или оставьте Ваши данные и наши менеджеры свяжутся с Вами. При заказе от 6 шт. скидка, а также для постоянных и корпоративных клиентов. 
+              Burgerim – это отличный способ провести сытно корпоратив, пообедать или поужинать вкусным, сочным гамбургером в Одессе. `
               || lng === 'UKR' &&
-              `Burgerim - це наша лабораторія з виготовлення міні-бургерів в Одесі. Ми використовуємо тільки місцеві продукти від перевірених постачальників, а також ексклюзивну рецептуру котлет, що дозволяє нам перетворити фаст-фуд в витвір кулінарного мистецтва. У нашому меню бургери з 4-х видів м'яса, так що кожен зможе знайти свій за смаком.
-              Ніжна булочка з хрусткою скоринкою, свіжі овочі та зелень, огірочки і гаряча соковита котлета, здатні урізноманітнити Ваш перекус, а також вгамувати голод. Для корпоративних клієнтів - приємні знижки.
+              `Burgerim- це смачні, невеликі гамбургери за доступною ціною та з швидкою доставкою. Оформіть замовлення на нашому сайті або залиште Ваші дані і наші менеджери зв'яжуться з Вами. При замовленні від 6 шт. знижка, а також для постійних і корпоративних клієнтів.
+              Burgerim - це відмінний спосіб провести ситно корпоратив, пообідати чи повечеряти смачним, соковитим гамбургером в Одесі.
               `
               || lng === 'ENG' &&
-              `Burgerim is our mini-burgers laboratory in Odessa. We use only local products from trusted suppliers, as well as an exclusive recipe for cutlets, which allows us to turn fast food into a culinary art. Our menu includes burgers from 4 types of meat, so that everyone can find their own to taste.
-              A tender bun with a crispy crust, fresh vegetables and herbs, cucumbers and a hot juicy cutlet can diversify your snack and also satisfy your hunger. For corporate clients - pleasant discounts.`
+              `Burgerim is delicious, small burgers at an affordable price with fast delivery. Place an order on our website or leave your details and our managers will contact you. When ordering from 6 pcs. discount, as well as for regular and corporate clients.
+              Burgerim is a great way to have a hearty corporate party, have lunch or dinner with a delicious, juicy hamburger in Odessa.`
           }
         </div>
       </div>

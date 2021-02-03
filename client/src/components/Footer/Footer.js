@@ -10,11 +10,11 @@ export default function Footer() {
     <div className='footer'>
       {
         lng === 'RUS' &&
-          "Burgerim - быстрая доставка вкусных и сочных бургеров в Одессе. Мы спасем Вас от голода. Для заказа звоните или оставляйте заявку на сайте."
+          "Burgerim - быстрая доставка вкусных и сочных бургеров в Одессе. Для заказа звоните или оставляйте заявку на сайте, и наши менеджеры свяжутся с Вами. Burgerim – это отличный способ провести сытно корпоратив, пообедать или поужинать вкусным, сочным гамбургером в Одессе."
           || lng === 'UKR' &&
-          'Burgerim - швидка доставка смачних і соковитих бургерів в Одесі. Ми врятуємо Вас від голоду. Для замовлення телефонуйте або залишайте заявку на сайті.'
+          'Burgerim - швидка доставка смачних і соковитих бургерів в Одесі. Для замовлення телефонуйте або залишайте заявку на сайті, і наші менеджери зв\'яжуться з Вами. Burgerim - це відмінний спосіб провести ситно корпоратив, пообідати чи повечеряти смачним, соковитим гамбургером в Одесі.'
           || lng === 'ENG' && 
-          `Burgerim - fast delivery of delicious and juicy burgers in Odessa. We will save you from hunger. To order, call or leave a request on the website.`
+          `Burgerim - fast delivery of delicious and juicy burgers in Odessa. To order, call or leave a request on the website, and our managers will contact you. Burgerim is a great way to have a hearty corporate party, have lunch or dinner with a delicious, juicy hamburger in Odessa.`
       }
     </div>
   )
