@@ -64,8 +64,8 @@ export default function OrderListInfo() {
             <div className='OrderListInfo__items'>
               {order.chicken !== 0 && <OrderItem title={lng === 'RUS' && 'Чикен бургер' || lng === 'UKR' && 'Чікен Бургер' || lng === 'ENG' && 'Chicken burger'} count={order.chicken} price={order.chickenPrice} className='OrderListInfo__item' />}
               {order.turkey !== 0 && <OrderItem title={lng === 'RUS' && 'Бургер с индейки' || lng === 'UKR' && 'Бургер з індички' || lng === 'ENG' && 'Turkey burger'} count={order.turkey} price={order.turkeyPrice} className='OrderListInfo__item' />}
-              {order.beef !== 0 && <OrderItem title={lng === 'RUS' && 'Классический бургер' || lng === 'UKR' && 'Класичний бургер' || lng === 'ENG' && 'Classic burger'} count={order.beef} price={order.beefPrice} className='OrderListInfo__item' />}
-              {order.pork !== 0 && <OrderItem title={lng === 'RUS' && 'Свинной бургер' || lng === 'UKR' && 'Бургер з свинини' || lng === 'ENG' && 'Pork burger'} count={order.pork} price={order.porkPrice} className='OrderListInfo__item' />}
+              {order.beef !== 0 && <OrderItem title={lng === 'RUS' && 'Бургер из говядины' || lng === 'UKR' && 'Бургер з яловичини' || lng === 'ENG' && 'Beef burger'} count={order.beef} price={order.beefPrice} className='OrderListInfo__item' />}
+              {order.pork !== 0 && <OrderItem title={lng === 'RUS' && 'Свинной бургер' || lng === 'UKR' && 'Бургер зі свинини' || lng === 'ENG' && 'Pork burger'} count={order.pork} price={order.porkPrice} className='OrderListInfo__item' />}
               {isWarningOpen && <div className='OrderListInfo__warning'>{lng === 'RUS' && '*Минимальное количество для заказа 2 бургера' || lng === 'UKR' && '*Мінімальна кількість для замовлення 2 бургера' || lng === 'ENG' && '*Minimal amount to replace 2 burgers'}</div>}
             </div>
             <div className="OrderListInfo__price">
