@@ -4,6 +4,7 @@
 
   width: 100px;
   &__input {
+    // mar;
     font-family: "Roboto";
     color: #555555;
     font-size: 26px;
@@ -13,9 +14,10 @@
     outline: none;
     border: none;
     padding-right: 45px;
-    padding: 5px 45px 5px 5px;
+    padding: 20px 45px 12px 5px;
     position: relative;
     width: 100%;
+    text-align: center;
   }
 
   &__btnContainer {
@@ -26,7 +28,6 @@
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
-
   }
 
   &__btn {
@@ -37,27 +38,27 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 40px;
-    height: 16px;
-    background-color: #C4C4C4;
+    height: 26px;
+    background-color: #c4c4c4;
 
     &--top {
-      background-image: url('../../assets/svg/arrowTop.svg');
+      background-image: url("../../assets/svg/arrowTop.svg");
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      border-bottom: 1px solid #9B9B9B;
+      border-bottom: 1px solid #9b9b9b;
     }
     &--bot {
-      background-image: url('../../assets/svg/arrowBot.svg');
+      background-image: url("../../assets/svg/arrowBot.svg");
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
   }
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }

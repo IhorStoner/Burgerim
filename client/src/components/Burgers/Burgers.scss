@@ -1,7 +1,7 @@
 .burgers {
   &__list {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 
@@ -10,13 +10,8 @@
     box-shadow: -2px 11px 12px 1px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
     padding: 20px 10px 10px 10px;
-    margin-right: 45px;
     position: relative;
-    min-width: 310px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    min-width: 250px;
   }
 
   &__img {
@@ -29,9 +24,8 @@
   }
 
   &__itemText {
-    color: #555555;
     font-size: 24px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     max-width: 300px;
     text-align: center;
@@ -43,6 +37,9 @@
   }
 
   &__itemCounter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Roboto";
     color: #555555;
     font-size: 26px;
@@ -60,11 +57,10 @@
     border-radius: 7px;
     outline: none;
     border: none;
-    
   }
 
   &__price {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -88,16 +84,16 @@
     background-size: contain;
 
     &--chicken {
-      background-image: url('../../assets/png/chiken.png');
+      background-image: url("../../assets/png/chiken.png");
     }
     &--turkey {
-      background-image: url('../../assets/png/turkey.png');
+      background-image: url("../../assets/png/turkey.png");
     }
     &--cow {
-      background-image: url('../../assets/png/cow.png');
+      background-image: url("../../assets/png/cow.png");
     }
     &--pig {
-      background-image: url('../../assets/png/pig.png');
+      background-image: url("../../assets/png/pig.png");
     }
   }
 
@@ -108,40 +104,63 @@
 
   &__title {
     margin-bottom: 76px;
+    // max-width: 90%;
   }
 }
-
-
 
 @media (max-width: 1399px) {
   .burgers {
     &__list {
-      margin: 0 auto;
-      justify-content: center;
-      padding: 0 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
 
     &__item {
       margin-bottom: 32px;
-      margin-right: 204px;
+      margin-right: 10px;
 
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-   
+      // &:nth-child(2n) {
+      //   margin-right: 0;
+      // }
     }
-
   }
 }
 
-@media (max-width: 883px) {
+@media (max-width: 1229px) {
+  .burgers {
+    &__item {
+      margin-bottom: 32px;
+      margin-right: 155px;
+    }
+  }
+}
+@media (max-width: 1050px) {
   .burgers {
     &__list {
-      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
 
     &__item {
-      margin-right: 45px;
+      margin-bottom: 32px;
+      margin-right: 90px;
+      margin-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 893  px) {
+  .burgers {
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin-right: 20px;
     }
   }
 }
