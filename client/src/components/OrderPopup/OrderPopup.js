@@ -3,8 +3,8 @@ import axios from 'axios'
 import FormOrderPopup from '../FormOrderPopup/FormOrderPopup.js'
 import config from '../../config/default.json'
 import { useDispatch } from 'react-redux'
-import { openPopup,orderSuccess } from '../../redux/actions/popUpAction'
-import {clearOrder} from '../../redux/actions/orderAction'
+import { openPopup, orderSuccess } from '../../redux/actions/popUpAction'
+import { clearOrder } from '../../redux/actions/orderAction'
 
 
 export default function OrderPopup() {
@@ -12,7 +12,7 @@ export default function OrderPopup() {
 
   const onSubmit = useCallback(async values => {
     await axios.post(`${config.apiUrl}/api/orderForm`, values).then(res => {
-      localStorage.removeItem('burgerimCart')
+      localStorage.removeItem('burgerim')
       dispatch(openPopup())
       dispatch(clearOrder())
       dispatch(orderSuccess(true))

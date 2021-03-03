@@ -32,10 +32,6 @@
     box-shadow: -1px 4px 8px 3px rgba(0, 0, 0, 0.25);
     border-radius: 27px;
     padding: 15px 5px 15px 5px;
-
-    // &:nth-child(3n) {
-    //   margin-right: 0;
-    // }
   }
 
   &__content {
@@ -62,17 +58,6 @@
       flex-wrap: wrap;
       margin: 0 auto;
       padding-left: 1.5rem;
-
-      // flex-direction: column;
-    }
-
-    &__item {
-      // margin-right: auto;
-      // margin-left: 1rem;
-      // &:nth-child(3n) {
-      //   margin-right: auto;
-      //   margin-left: auto;
-      // }
     }
   }
 }

@@ -86,15 +86,11 @@
     &__form {
       display: flex;
       flex-direction: row;
-      // padding: 30px 55px 193px 55px;
       background-size: contain;
-      // max-width: 326px;
     }
     &__btnContainer {
       height: auto;
       margin-left: 4rem;
-      // margin-left: 1rem;
-      // margin-top: 20px;
     }
   }
 }
@@ -108,12 +104,10 @@
     &__btnContainer {
       height: auto;
       margin: 0 auto;
-      // margin-left: 1rem;
       margin-top: 20px;
     }
     &__price {
       margin: 0 auto;
-      // font-size: 20px;
       text-align: center;
     }
   }

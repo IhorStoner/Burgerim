@@ -4,7 +4,7 @@ import { changeCountChicken, changeCountTurkey, changeCountBeef, changeCountPork
 let initialState = {};
 
 try {
-  initialState = JSON.parse(localStorage.getItem('burgerimCart')) || {
+  initialState = JSON.parse(localStorage.getItem('burgerim')) || {
     chicken: 0,
     chickenOnePrice: 30,
     chickenPrice: 0,
