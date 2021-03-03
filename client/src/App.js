@@ -15,10 +15,10 @@ function App() {
     <Provider store={store} className="App">
       <Header />
       <Slider />
-      <OrderButtons/>
+      <OrderButtons />
       <OrderPopup />
       <MenuList />
-      <Footer/>
+      <Footer />
     </Provider>
   );
 }

@@ -6,12 +6,13 @@
   }
 
   &__form {
-    background: url("../../assets/png/order.png") center top;
-    min-height: 970px;
+    display: flex;
+    flex-direction: row;
+    min-height: auto;
     background-repeat: no-repeat;
-    background-size:contain;
-    max-width: 790px;
-    padding: 70px 55px 85px 55px;
+    background-size: contain;
+    // max-width: 790px;
+    padding: 0px 55px 0px 55px;
     margin: 0 auto;
     position: relative;
 
@@ -29,19 +30,20 @@
   &__item {
     margin-bottom: 40px;
     width: 100%;
+    margin-right: 15px;
   }
 
   &__price {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
-    font-size: 35px;
+    font-size: 30px;
     color: #000000;
-   
   }
 
   &__btnContainer {
-    text-align: center;
+    height: auto;
+    margin-left: 4rem;
     margin-top: 20px;
   }
 
@@ -61,7 +63,7 @@
   }
 
   &__orderEmpty {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -82,9 +84,37 @@
 @media (max-width: 1399px) {
   .OrderListInfo {
     &__form {
-      padding: 30px 55px 193px 55px;
+      display: flex;
+      flex-direction: row;
+      // padding: 30px 55px 193px 55px;
       background-size: contain;
       // max-width: 326px;
+    }
+    &__btnContainer {
+      height: auto;
+      margin-left: 4rem;
+      // margin-left: 1rem;
+      // margin-top: 20px;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .OrderListInfo {
+    &__form {
+      display: flex;
+      flex-direction: column;
+      background-size: contain;
+    }
+    &__btnContainer {
+      height: auto;
+      margin: 0 auto;
+      // margin-left: 1rem;
+      margin-top: 20px;
+    }
+    &__price {
+      margin: 0 auto;
+      // font-size: 20px;
+      text-align: center;
     }
   }
 }
@@ -92,9 +122,8 @@
 @media (max-width: 850px) {
   .OrderListInfo {
     &__form {
-      padding: 30px 50px 50px 50px;
-      min-height: 790px;
-      // background: url("../../assets/png/mobForm.png");
+      display: flex;
+      flex-direction: column;
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -104,11 +133,14 @@
     }
 
     &__item {
-      padding: 10px 10px !important; 
+      margin: 0 auto;
+      padding: 10px 10px !important;
       max-width: 600px;
     }
 
-    &__price { 
+    &__price {
+      margin: 0 auto;
+
       font-size: 20px;
       text-align: center;
     }
@@ -129,18 +161,15 @@
     }
 
     &__form {
-      padding: 30px 25px 30px 25px;
-  
       background-repeat: no-repeat;
       background-size: contain;
-      min-height: 640px;
     }
 
     &__item {
       max-width: 430px;
     }
 
-    &__price { 
+    &__price {
       font-size: 20px;
     }
 
@@ -152,7 +181,6 @@
 
 @media (max-width: 475px) {
   .OrderListInfo {
-
     &__btn {
       padding: 6px 25px;
       border-radius: 5px;
@@ -162,10 +190,10 @@
       padding: 5px;
       max-width: 160px;
     }
-
+    &__btnContainer {
+      margin-left: 0;
+    }
     &__form {
-      min-height: 500px;
-      background: url("../../assets/png/mobForm.png") center top;
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -179,7 +207,6 @@
 @media (max-width: 340px) {
   .OrderListInfo {
     &__form {
-      min-height: 390px;
     }
   }
 }

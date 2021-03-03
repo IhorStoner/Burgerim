@@ -3,7 +3,7 @@
   z-index: -1;
   text-align: center;
   &__slide {
-    width: 90%;
+    width: 80%;
     max-height: 390px;
   }
 }
@@ -65,7 +65,6 @@
 }
 
 @media (max-width: 850px) {
-
   .sliderImg {
     display: none;
   }

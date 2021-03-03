@@ -23,8 +23,6 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-
-
   }
 
   &__langList {
@@ -35,7 +33,7 @@
     border-radius: 15px;
     padding: 10px 25px;
     top: 42px;
-    left: 42px;
+    left: 10px;
     position: absolute;
 
     &:before {
@@ -166,6 +164,36 @@
   }
 }
 
+@media (max-width: 1150px) {
+  .header {
+    &__logoLine {
+      width: 100px;
+    }
+    &__logoContainer {
+      // width: 80%;
+      margin-right: 10%;
+    }
+  }
+}
+@media (max-width: 1268px) {
+  .header {
+    // max-width: 95%  ;
+    &__logoLine {
+      width: 100px;
+    }
+    &__btnsContainer {
+      margin-right: 1rem;
+    }
+    &__lang-container {
+      margin-left: 0;
+    }
+    &__logoContainer {
+      // width: 80%;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+  }
+}
 @media (max-width: 850px) {
   .header {
     padding: 10px 10% 80px 30px;
@@ -192,14 +220,6 @@
     &__logoContainer {
       text-align: center;
       margin: 0 auto;
-    }
-  }
-}
-
-@media (max-width: 1268px) {
-  .header {
-    &__logoLine {
-      width: 100px;
     }
   }
 }

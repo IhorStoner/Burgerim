@@ -17,6 +17,7 @@ export default function Drinks() {
     <div className='drinks'>
       <Title text={lng === 'RUS' && 'Напитки' || lng === 'UKR' && 'Напої' || lng === 'ENG' && 'Drinks'} />
       <div className="drinks__content">
+        {/* <div> */}
         <div className="drinks__item">
           <img src={cola} alt="Кока кола" className="drinks__img" />
           <div className="drinks__textContainer">
@@ -41,6 +42,8 @@ export default function Drinks() {
             <span className="drinks__price">15 {lng === 'ENG' ? 'uah' : 'грн'}</span>
           </div>
         </div>
+        {/* </div>
+        <div> */}
         <div className="drinks__item">
           <img src={juice} alt="Соки" className="drinks__img" />
           <div className="drinks__textContainer">
@@ -67,5 +70,6 @@ export default function Drinks() {
         </div>
       </div>
     </div>
+    // </div>
   )
 }

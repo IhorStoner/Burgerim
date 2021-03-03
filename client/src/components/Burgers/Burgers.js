@@ -30,9 +30,9 @@ export default function Burgers() {
             <InputNumber action={changeCountChicken} defaultVal={order.chicken} val={order.chicken} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
-          <div className="burgers__price">
+          {/* <div className="burgers__price">
             {order.chickenPrice} {lng === 'ENG' ? 'uah' : 'грн'}
-          </div>
+          </div> */}
         </div>
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--turkey"></div>
@@ -47,9 +47,9 @@ export default function Burgers() {
             <InputNumber action={changeCountTurkey} defaultVal={order.turkey} val={order.turkey} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
-          <div className="burgers__price">
+          {/* <div className="burgers__price">
             {order.turkeyPrice} {lng === 'ENG' ? 'uah' : 'грн'}
-          </div>
+          </div> */}
         </div>
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--cow"></div>
@@ -64,9 +64,9 @@ export default function Burgers() {
             <InputNumber action={changeCountBeef} defaultVal={order.beef} val={order.beef} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
-          <div className="burgers__price">
+          {/* <div className="burgers__price">
             {order.beefPrice} {lng === 'ENG' ? 'uah' : 'грн'}
-          </div>
+          </div> */}
         </div>
         <div className="burgers__item">
           <div className="burgers__icon burgers__icon--pig"></div>
@@ -81,9 +81,9 @@ export default function Burgers() {
             <InputNumber action={changeCountPork} defaultVal={order.pork} val={order.pork} className='burgers__input' />
             {lng === 'ENG' ? 'pcs' : 'шт.'}
           </div>
-          <div className="burgers__price">
+          {/* <div className="burgers__price">
             {order.porkPrice} {lng === 'ENG' ? 'uah' : 'грн'}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
