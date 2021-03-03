@@ -35,7 +35,7 @@ export default function OrderListInfo() {
         <div className="OrderListInfo__btnContainer">
           <button type='button' className="OrderListInfo__btn" onClick={() => handleSubmitClick()}>{lng === 'RUS' && 'Оформить заказ' || lng === 'UKR' && 'Оформити замовлення' || lng === 'ENG' && 'Checkout'}</button>
           {warning ? <div className="OrderListInfo__warning">
-            {lng === 'RUS' && 'Минимальный заказ 60 грн' || lng === 'UKR' && ' Mінімальне замовлення 60 грн' || lng === 'ENG' && 'minimum order 60 ua'}
+            {lng === 'RUS' && 'Минимальный заказ 60 грн' || lng === 'UKR' && ' Mінімальне замовлення 60 грн' || lng === 'ENG' && 'minimum order 60 uah'}
           </div> : null}
         </div>
 

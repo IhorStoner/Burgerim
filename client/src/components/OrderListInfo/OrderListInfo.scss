@@ -34,6 +34,7 @@
   }
 
   &__price {
+    position: absolute;
     font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
@@ -43,7 +44,7 @@
 
   &__btnContainer {
     height: auto;
-    margin-left: 4rem;
+    margin: 0 auto;
     margin-top: 20px;
   }
 
@@ -104,7 +105,7 @@
     &__btnContainer {
       height: auto;
       margin: 0 auto;
-      margin-top: 20px;
+      margin-top: 50px;
     }
     &__price {
       margin: 0 auto;
@@ -130,6 +131,10 @@
       margin: 0 auto;
       padding: 10px 10px !important;
       max-width: 600px;
+    }
+    &__btnContainer {
+      margin: 0 auto;
+      margin-top: 1.5rem;
     }
 
     &__price {
@@ -166,6 +171,10 @@
     &__price {
       font-size: 20px;
     }
+    &__btnContainer {
+      margin: 0 auto;
+      margin-top: 1.5rem;
+    }
 
     &__btn {
       font-size: 18px;
@@ -185,7 +194,8 @@
       max-width: 160px;
     }
     &__btnContainer {
-      margin-left: 0;
+      margin: 0 auto;
+      margin-top: 1.5rem;
     }
     &__form {
       background-repeat: no-repeat;
