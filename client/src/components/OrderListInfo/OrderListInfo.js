@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './OrderListInfo.scss'
-import Title from '../Title/Title'
-import OrderItem from '../OrderItem/OrderItem'
 import { useSelector } from 'react-redux'
 import { getOrder } from '../../redux/selectors/orderSelector'
 import { useDispatch } from 'react-redux'
@@ -16,28 +14,30 @@ export default function OrderListInfo() {
   const dispatch = useDispatch()
   const isOrderSuccess = useSelector(getOrderSuccess)
   const [isWarningOpen, setIsWarningOpen] = useState(false)
+  const [warning, setWarning] = useState(false)
   useEffect(() => {
     dispatch(orderSuccess(false))
     setIsWarningOpen(false)
   }, [order])
 
   const handleSubmitClick = () => {
-    if (order.totalPrice < 100) setIsWarningOpen(true)
-    if (order.totalPrice >= 100) dispatch(openPopup())
+    if (order.totalPrice < 60) { setIsWarningOpen(true); setWarning(true) }
+    if (order.totalPrice >= 60) { dispatch(openPopup()); setWarning(false) }
   }
 
   return (
     <section className='OrderListInfo'>
       <form className={`OrderListInfo__form ${order.totalPrice === 0 && 'OrderListInfo__form--empty'}`}>
 
-        {/* <div> */}
         <div className="OrderListInfo__price">
           {lng === 'RUS' && 'Сумма:' || lng === 'UKR' && 'Сума:' || lng === 'ENG' && 'Amount:'} {order.totalPrice} {lng === 'ENG' ? 'uah' : 'грн'}
         </div>
         <div className="OrderListInfo__btnContainer">
           <button type='button' className="OrderListInfo__btn" onClick={() => handleSubmitClick()}>{lng === 'RUS' && 'Оформить заказ' || lng === 'UKR' && 'Оформити замовлення' || lng === 'ENG' && 'Checkout'}</button>
+          {warning ? <div className="OrderListInfo__warning">
+            {lng === 'RUS' && 'Минимальный заказ 60 грн' || lng === 'UKR' && ' Mінімальне замовлення 60 грн' || lng === 'ENG' && 'minimum order 60 ua'}
+          </div> : null}
         </div>
-        {/* </div> */}
 
       </form>
     </section>
